@@ -1,0 +1,340 @@
+{
+  "appName": {
+    "message": "Tab Purger & Grouper - Gestionnaire d'onglets",
+    "description": "Nom de l'extension"
+  },
+  "appDesc": {
+    "message": "Nettoyez les onglets en double en un clic et regroupez intelligemment les onglets par domaine ou catégorie avec Chrome Tab Groups.",
+    "description": "Description de l'extension"
+  },
+  "cmdCleanDuplicates": {
+    "message": "Fermer les onglets en double en un clic",
+    "description": "Description du raccourci pour fermer les doublons"
+  },
+  "cmdGroupTabsByDomain": {
+    "message": "Grouper les onglets par domaine",
+    "description": "Description du raccourci pour grouper par domaine"
+  },
+  "brandTitle": {
+    "message": "Tab Purger & Grouper",
+    "description": "Titre dans l'en-tête"
+  },
+  "brandSubtitle": {
+    "message": "Assistant de nettoyage et regroupement d'onglets",
+    "description": "Sous-titre dans l'en-tête"
+  },
+  "titlePreferences": {
+    "message": "Préférences",
+    "description": "Infobulle du bouton de paramètres"
+  },
+  "scopeCurrentWindow": {
+    "message": "Fenêtre active",
+    "description": "Bouton pour la fenêtre actuelle"
+  },
+  "scopeAllWindows": {
+    "message": "Toutes les fenêtres",
+    "description": "Bouton pour toutes les fenêtres"
+  },
+  "statTotalTabs": {
+    "message": "Total onglets",
+    "description": "Statistique du nombre total d'onglets"
+  },
+  "statDuplicates": {
+    "message": "Doublons",
+    "description": "Statistique du nombre de doublons"
+  },
+  "statGroups": {
+    "message": "Groupes",
+    "description": "Statistique du nombre de groupes"
+  },
+  "btnSmartClean": {
+    "message": "Nettoyage intelligent (Doublons + Groupes)",
+    "description": "Bouton d'action principale"
+  },
+  "btnCloseDuplicates": {
+    "message": "Fermer les doublons",
+    "description": "Bouton pour fermer les onglets en double"
+  },
+  "btnGroupByDomain": {
+    "message": "Grouper par domaine",
+    "description": "Bouton pour grouper par domaine"
+  },
+  "btnGroupByCategory": {
+    "message": "Grouper par catégorie",
+    "description": "Bouton pour grouper par catégorie intelligente"
+  },
+  "btnUngroupAll": {
+    "message": "Dissoudre tous les groupes",
+    "description": "Bouton pour dissoudre tous les groupes"
+  },
+  "previewTitle": {
+    "message": "Liste des onglets en double",
+    "description": "Titre de l'accordéon des doublons"
+  },
+  "previewEmpty": {
+    "message": "Aucun onglet en double trouvé 🎉",
+    "description": "Message lorsqu'il n'y a pas de doublon"
+  },
+  "btnQuickClose": {
+    "message": "Fermer",
+    "description": "Bouton de fermeture rapide"
+  },
+  "btnQuickCloseTitle": {
+    "message": "Fermer les doublons de ce groupe",
+    "description": "Infobulle du bouton de fermeture rapide"
+  },
+  "badgeKept": {
+    "message": "Conservé",
+    "description": "Badge pour l'onglet conservé"
+  },
+  "badgeToClose": {
+    "message": "Sera fermé",
+    "description": "Badge pour l'onglet à fermer"
+  },
+  "tabPrefix": {
+    "message": "Onglet n°$INDEX$",
+    "description": "Préfixe de numéro d'onglet",
+    "placeholders": {
+      "index": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "settingsTitle": {
+    "message": "Préférences",
+    "description": "Titre du panneau de paramètres"
+  },
+  "btnCloseSettings": {
+    "message": "Fermer les paramètres",
+    "description": "Bouton pour fermer les paramètres"
+  },
+  "setGroupDuplicateRules": {
+    "message": "Règles de détection des doublons",
+    "description": "En-tête de section des règles de doublons"
+  },
+  "setIgnoreHash": {
+    "message": "Ignorer le fragment d'URL (#)",
+    "description": "Option ignorer le hash de l'URL"
+  },
+  "setIgnoreHashDesc": {
+    "message": "ex. page#sec1 et page sont considérés identiques",
+    "description": "Description ignorer le hash"
+  },
+  "setIgnoreTracking": {
+    "message": "Ignorer les paramètres de suivi",
+    "description": "Option ignorer les paramètres de suivi"
+  },
+  "setIgnoreTrackingDesc": {
+    "message": "Supprimer utm_*, fbclid, gclid et balises publicitaires",
+    "description": "Description ignorer le suivi"
+  },
+  "setIgnoreQuery": {
+    "message": "Ignorer tous les paramètres de requête (?)",
+    "description": "Option ignorer toutes les requêtes URL"
+  },
+  "setIgnoreQueryDesc": {
+    "message": "Comparer uniquement le chemin principal de l'URL",
+    "description": "Description ignorer les requêtes"
+  },
+  "setIgnoreTrailingSlash": {
+    "message": "Ignorer la barre oblique finale (/)",
+    "description": "Option ignorer le slash final"
+  },
+  "setIgnoreTrailingSlashDesc": {
+    "message": "ex. site.com/blog/ et site.com/blog sont identiques",
+    "description": "Description ignorer le slash final"
+  },
+  "setGroupPreserve": {
+    "message": "Règles de rétention et sécurité",
+    "description": "En-tête des règles de conservation"
+  },
+  "setKeepStrategy": {
+    "message": "Onglet prioritaire à conserver",
+    "description": "Option priorité de conservation"
+  },
+  "setKeepStrategyDesc": {
+    "message": "Choisir quel onglet en double conserver",
+    "description": "Description priorité de conservation"
+  },
+  "optEarliest": {
+    "message": "Premier onglet ouvert",
+    "description": "Option premier onglet"
+  },
+  "optActive": {
+    "message": "Onglet actuellement actif",
+    "description": "Option onglet actif"
+  },
+  "optLatest": {
+    "message": "Dernier onglet ouvert",
+    "description": "Option dernier onglet"
+  },
+  "setExcludePinned": {
+    "message": "Protéger les onglets épinglés",
+    "description": "Option protéger les onglets épinglés"
+  },
+  "setExcludePinnedDesc": {
+    "message": "Ne jamais fermer automatiquement les onglets épinglés",
+    "description": "Description protection onglets épinglés"
+  },
+  "setGroupTabGroups": {
+    "message": "Paramètres des groupes d'onglets",
+    "description": "En-tête des groupes d'onglets"
+  },
+  "setMinTabsPerGroup": {
+    "message": "Onglets min. par groupe",
+    "description": "Option seuil minimum d'onglets"
+  },
+  "setMinTabsPerGroupDesc": {
+    "message": "Créer un groupe uniquement si ce seuil est atteint",
+    "description": "Description seuil minimum"
+  },
+  "optMin1": {
+    "message": "1 onglet (Tout grouper)",
+    "description": "Option 1 onglet"
+  },
+  "optMin2": {
+    "message": "2 onglets (Recommandé)",
+    "description": "Option 2 onglets"
+  },
+  "optMin3": {
+    "message": "3 onglets ou plus",
+    "description": "Option 3 onglets ou plus"
+  },
+  "setUseMainDomain": {
+    "message": "Regrouper par domaine racine",
+    "description": "Option regrouper par domaine racine"
+  },
+  "setUseMainDomainDesc": {
+    "message": "Fusionner mail.google.com et google.com",
+    "description": "Description domaine racine"
+  },
+  "setCollapseGroups": {
+    "message": "Réduire automatiquement les groupes",
+    "description": "Option réduction automatique des groupes"
+  },
+  "setCollapseGroupsDesc": {
+    "message": "Réduire les groupes pour libérer de l'espace",
+    "description": "Description réduction des groupes"
+  },
+  "btnResetSettings": {
+    "message": "Rétablir les valeurs par défaut",
+    "description": "Bouton réinitialiser paramètres"
+  },
+  "shortcutTip": {
+    "message": "Raccourcis : Alt+Shift+D Nettoyer doublons ｜ Alt+Shift+G Grouper onglets",
+    "description": "Astuce raccourcis clavier"
+  },
+  "categoryAiSearch": {
+    "message": "🔍 Recherche & IA",
+    "description": "Nom catégorie recherche"
+  },
+  "categoryDevelopment": {
+    "message": "💼 Développement",
+    "description": "Nom catégorie dev"
+  },
+  "categorySocial": {
+    "message": "💬 Réseaux & Discussion",
+    "description": "Nom catégorie réseaux"
+  },
+  "categoryMedia": {
+    "message": "🎬 Médias & Streaming",
+    "description": "Nom catégorie streaming"
+  },
+  "categoryDocs": {
+    "message": "📝 Docs & Collaboration",
+    "description": "Nom catégorie documents"
+  },
+  "categoryShopping": {
+    "message": "🛒 Shopping & Commerce",
+    "description": "Nom catégorie commerce"
+  },
+  "categoryNews": {
+    "message": "📰 Actualités & Lecture",
+    "description": "Nom catégorie actualités"
+  },
+  "domainChrome": {
+    "message": "Pages système Chrome",
+    "description": "Pages système Chrome"
+  },
+  "domainLocalFile": {
+    "message": "Fichier local (file://)",
+    "description": "Fichiers locaux"
+  },
+  "domainOther": {
+    "message": "Autre",
+    "description": "Autre domaine"
+  },
+  "toastSmartCleanDone": {
+    "message": "Terminé ! $CLOSED$ doublons fermés, $GROUPS$ groupes créés.",
+    "description": "Notification nettoyage terminé",
+    "placeholders": {
+      "closed": { "content": "$1" },
+      "groups": { "content": "$2" }
+    }
+  },
+  "toastClosedDuplicates": {
+    "message": "$COUNT$ onglets en double fermés avec succès !",
+    "description": "Notification doublons fermés",
+    "placeholders": {
+      "count": { "content": "$1" }
+    }
+  },
+  "toastCreatedGroups": {
+    "message": "$GROUPS$ groupes créés ($TABS$ onglets) !",
+    "description": "Notification groupes créés",
+    "placeholders": {
+      "groups": { "content": "$1" },
+      "tabs": { "content": "$2" }
+    }
+  },
+  "toastCreatedCategoryGroups": {
+    "message": "$GROUPS$ groupes par catégorie créés ($TABS$ onglets) !",
+    "description": "Notification groupes par catégorie",
+    "placeholders": {
+      "groups": { "content": "$1" },
+      "tabs": { "content": "$2" }
+    }
+  },
+  "toastUngroupedAll": {
+    "message": "Tous les groupes dissous ($TABS$ onglets) !",
+    "description": "Notification groupes dissous",
+    "placeholders": {
+      "tabs": { "content": "$1" }
+    }
+  },
+  "toastNoDuplicates": {
+    "message": "Aucun onglet en double trouvé.",
+    "description": "Notification aucun doublon"
+  },
+  "toastAlreadyClean": {
+    "message": "Vos onglets sont déjà parfaitement organisés !",
+    "description": "Notification déjà propre"
+  },
+  "toastNoGroups": {
+    "message": "Aucun onglet groupé actuellement.",
+    "description": "Notification aucun groupe"
+  },
+  "toastThresholdNotMet": {
+    "message": "Seuil non atteint (au moins $COUNT$ onglets par domaine requis).",
+    "description": "Notification seuil non atteint",
+    "placeholders": {
+      "count": { "content": "$1" }
+    }
+  },
+  "toastSettingsReset": {
+    "message": "Les préférences ont été réinitialisées.",
+    "description": "Notification réinitialisation"
+  },
+  "toastActionError": {
+    "message": "Une erreur est survenue lors de l'opération.",
+    "description": "Notification erreur"
+  },
+  "badgeDuplicatesTitle": {
+    "message": "$COUNT$ onglets en double détectés - cliquer pour nettoyer",
+    "description": "Infobulle du badge",
+    "placeholders": {
+      "count": { "content": "$1" }
+    }
+  }
+}
