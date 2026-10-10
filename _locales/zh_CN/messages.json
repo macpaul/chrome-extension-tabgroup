@@ -1,0 +1,340 @@
+{
+  "appName": {
+    "message": "Tab Purger & Grouper - 标签页清理与群组助手",
+    "description": "扩展名称"
+  },
+  "appDesc": {
+    "message": "一键清理重复标签页，并支持按域名或自定义类型智能合并 Chrome 标签页群组 (Tab Groups)。",
+    "description": "扩展描述"
+  },
+  "cmdCleanDuplicates": {
+    "message": "一键关闭重复标签页",
+    "description": "关闭重复标签页快捷键描述"
+  },
+  "cmdGroupTabsByDomain": {
+    "message": "按域名合并标签页群组",
+    "description": "按域名分组快捷键描述"
+  },
+  "brandTitle": {
+    "message": "Tab Purger & Grouper",
+    "description": "标题栏品牌名称"
+  },
+  "brandSubtitle": {
+    "message": "标签页清理与群组整理助手",
+    "description": "标题栏副标题"
+  },
+  "titlePreferences": {
+    "message": "偏好设置",
+    "description": "设置按钮提示文字"
+  },
+  "scopeCurrentWindow": {
+    "message": "当前窗口",
+    "description": "当前窗口范围按钮"
+  },
+  "scopeAllWindows": {
+    "message": "所有窗口",
+    "description": "所有窗口范围按钮"
+  },
+  "statTotalTabs": {
+    "message": "总标签数",
+    "description": "统计项目：总标签数"
+  },
+  "statDuplicates": {
+    "message": "重复标签",
+    "description": "统计项目：重复标签"
+  },
+  "statGroups": {
+    "message": "已分组数",
+    "description": "统计项目：已分组数"
+  },
+  "btnSmartClean": {
+    "message": "一键整理 (清理重复 + 域名分组)",
+    "description": "主功能按钮文字"
+  },
+  "btnCloseDuplicates": {
+    "message": "关闭重复标签页",
+    "description": "关闭重复标签页按钮"
+  },
+  "btnGroupByDomain": {
+    "message": "按域名分组",
+    "description": "按域名分组按钮"
+  },
+  "btnGroupByCategory": {
+    "message": "按类型智能分组",
+    "description": "按类型智能分组按钮"
+  },
+  "btnUngroupAll": {
+    "message": "解散所有分组",
+    "description": "解散所有分组按钮"
+  },
+  "previewTitle": {
+    "message": "重复标签页清单",
+    "description": "重复标签页预览折叠标题"
+  },
+  "previewEmpty": {
+    "message": "目前没有发现重复标签页 🎉",
+    "description": "无重复标签页提示"
+  },
+  "btnQuickClose": {
+    "message": "关闭",
+    "description": "单组快速关闭按钮"
+  },
+  "btnQuickCloseTitle": {
+    "message": "关闭此组的重复标签页",
+    "description": "单组快速关闭按钮提示"
+  },
+  "badgeKept": {
+    "message": "保留",
+    "description": "保留标签页徽章"
+  },
+  "badgeToClose": {
+    "message": "将关闭",
+    "description": "即将关闭标签页徽章"
+  },
+  "tabPrefix": {
+    "message": "标签页 #$INDEX$",
+    "description": "标签页序号显示",
+    "placeholders": {
+      "index": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "settingsTitle": {
+    "message": "偏好设置",
+    "description": "设置抽屉标题"
+  },
+  "btnCloseSettings": {
+    "message": "关闭设置",
+    "description": "关闭设置按钮提示"
+  },
+  "setGroupDuplicateRules": {
+    "message": "重复标签页判定规则",
+    "description": "重复规则分组标题"
+  },
+  "setIgnoreHash": {
+    "message": "忽略网址锚点 (Hash #)",
+    "description": "忽略锚点设置标签"
+  },
+  "setIgnoreHashDesc": {
+    "message": "例：page#section 与 page 视为相同",
+    "description": "忽略锚点说明"
+  },
+  "setIgnoreTracking": {
+    "message": "忽略常见追踪参数",
+    "description": "忽略追踪码设置标签"
+  },
+  "setIgnoreTrackingDesc": {
+    "message": "移除 utm_*, fbclid, gclid 等广告追踪码",
+    "description": "忽略追踪码说明"
+  },
+  "setIgnoreQuery": {
+    "message": "忽略所有网址参数 (?)",
+    "description": "忽略全部 query 设置标签"
+  },
+  "setIgnoreQueryDesc": {
+    "message": "只比对主路径，忽略所有 URL Query",
+    "description": "忽略全部 query 说明"
+  },
+  "setIgnoreTrailingSlash": {
+    "message": "忽略结尾斜线 (/)",
+    "description": "忽略结尾斜线设置标签"
+  },
+  "setIgnoreTrailingSlashDesc": {
+    "message": "例：site.com/blog/ 与 site.com/blog 视为相同",
+    "description": "忽略结尾斜线说明"
+  },
+  "setGroupPreserve": {
+    "message": "标签页保留与安全规则",
+    "description": "保留规则分组标题"
+  },
+  "setKeepStrategy": {
+    "message": "重复时优先保留",
+    "description": "保留策略标签"
+  },
+  "setKeepStrategyDesc": {
+    "message": "选择要留下的标签页",
+    "description": "保留策略说明"
+  },
+  "optEarliest": {
+    "message": "最早开启的标签页",
+    "description": "最早开启标签页选项"
+  },
+  "optActive": {
+    "message": "当前使用中的标签页",
+    "description": "当前使用中标签页选项"
+  },
+  "optLatest": {
+    "message": "最新开启的标签页",
+    "description": "最新开启标签页选项"
+  },
+  "setExcludePinned": {
+    "message": "保护固定标签页",
+    "description": "保护固定标签页标签"
+  },
+  "setExcludePinnedDesc": {
+    "message": "固定的标签页一律不自动关闭",
+    "description": "保护固定标签页说明"
+  },
+  "setGroupTabGroups": {
+    "message": "群组设置 (Tab Groups)",
+    "description": "群组设置分组标题"
+  },
+  "setMinTabsPerGroup": {
+    "message": "成组最低标签数",
+    "description": "成组最低数量标签"
+  },
+  "setMinTabsPerGroupDesc": {
+    "message": "达到此数量时才建立群组",
+    "description": "成组最低数量说明"
+  },
+  "optMin1": {
+    "message": "1 个标签 (全部群组化)",
+    "description": "最低 1 个选项"
+  },
+  "optMin2": {
+    "message": "2 个标签 (推荐)",
+    "description": "最低 2 个选项"
+  },
+  "optMin3": {
+    "message": "3 个标签以上",
+    "description": "最低 3 个选项"
+  },
+  "setUseMainDomain": {
+    "message": "按主域名聚合",
+    "description": "按主域名聚合标签"
+  },
+  "setUseMainDomainDesc": {
+    "message": "将 mail.google.com 与 google.com 合并",
+    "description": "按主域名聚合说明"
+  },
+  "setCollapseGroups": {
+    "message": "建立群组后自动折叠",
+    "description": "自动折叠群组标签"
+  },
+  "setCollapseGroupsDesc": {
+    "message": "折叠已分组的标签页以保持界面整洁",
+    "description": "自动折叠群组说明"
+  },
+  "btnResetSettings": {
+    "message": "恢复默认值",
+    "description": "重设设置按钮"
+  },
+  "shortcutTip": {
+    "message": "快捷键：Alt+Shift+D 清除重复 ｜ Alt+Shift+G 域名分组",
+    "description": "快捷键提示文字"
+  },
+  "categoryAiSearch": {
+    "message": "🔍 搜索与 AI",
+    "description": "搜索与AI类别名称"
+  },
+  "categoryDevelopment": {
+    "message": "💼 开发与技术",
+    "description": "开发与技术类别名称"
+  },
+  "categorySocial": {
+    "message": "💬 社交与通讯",
+    "description": "社交与通讯类别名称"
+  },
+  "categoryMedia": {
+    "message": "🎬 影音与流媒体",
+    "description": "影音与流媒体类别名称"
+  },
+  "categoryDocs": {
+    "message": "📝 文档与协作",
+    "description": "文档与协作类别名称"
+  },
+  "categoryShopping": {
+    "message": "🛒 购物与电商",
+    "description": "购物与电商类别名称"
+  },
+  "categoryNews": {
+    "message": "📰 新闻与阅读",
+    "description": "新闻与阅读类别名称"
+  },
+  "domainChrome": {
+    "message": "Chrome 系统页面",
+    "description": "Chrome内部系统标签页"
+  },
+  "domainLocalFile": {
+    "message": "本地文件 (file://)",
+    "description": "本地文件标签"
+  },
+  "domainOther": {
+    "message": "其他",
+    "description": "其他未知域名标签"
+  },
+  "toastSmartCleanDone": {
+    "message": "整理完成！关闭 $CLOSED$ 个重复，建立 $GROUPS$ 个群组",
+    "description": "一键整理完成提示",
+    "placeholders": {
+      "closed": { "content": "$1" },
+      "groups": { "content": "$2" }
+    }
+  },
+  "toastClosedDuplicates": {
+    "message": "已成功关闭 $COUNT$ 个重复标签页！",
+    "description": "关闭重复标签页成功提示",
+    "placeholders": {
+      "count": { "content": "$1" }
+    }
+  },
+  "toastCreatedGroups": {
+    "message": "已建立 $GROUPS$ 个标签页群组 ($TABS$ 个标签页)！",
+    "description": "建立域名群组提示",
+    "placeholders": {
+      "groups": { "content": "$1" },
+      "tabs": { "content": "$2" }
+    }
+  },
+  "toastCreatedCategoryGroups": {
+    "message": "已按类型建立 $GROUPS$ 个标签页群组 ($TABS$ 个标签页)！",
+    "description": "建立类别群组提示",
+    "placeholders": {
+      "groups": { "content": "$1" },
+      "tabs": { "content": "$2" }
+    }
+  },
+  "toastUngroupedAll": {
+    "message": "已解散所有标签页群组 ($TABS$ 个标签页)！",
+    "description": "解散群组提示",
+    "placeholders": {
+      "tabs": { "content": "$1" }
+    }
+  },
+  "toastNoDuplicates": {
+    "message": "没有发现重复标签页",
+    "description": "无重复标签页提示"
+  },
+  "toastAlreadyClean": {
+    "message": "标签页已是最整洁状态！",
+    "description": "已是最整洁状态提示"
+  },
+  "toastNoGroups": {
+    "message": "目前没有任何分组标签页",
+    "description": "无分组标签页提示"
+  },
+  "toastThresholdNotMet": {
+    "message": "未达分组门槛 (至少需 $COUNT$ 个同域名标签页)",
+    "description": "未达分组门槛提示",
+    "placeholders": {
+      "count": { "content": "$1" }
+    }
+  },
+  "toastSettingsReset": {
+    "message": "设置已恢复为默认值",
+    "description": "恢复默认值提示"
+  },
+  "toastActionError": {
+    "message": "处理时发生错误",
+    "description": "操作错误提示"
+  },
+  "badgeDuplicatesTitle": {
+    "message": "发现 $COUNT$ 个重复标签页 - 点击清理",
+    "description": "浏览器图标提示",
+    "placeholders": {
+      "count": { "content": "$1" }
+    }
+  }
+}
