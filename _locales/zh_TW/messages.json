@@ -1,0 +1,340 @@
+{
+  "appName": {
+    "message": "Tab Purger & Grouper - 分頁清理與群組助手",
+    "description": "擴充功能名稱"
+  },
+  "appDesc": {
+    "message": "一鍵清理重複分頁，並支援依網域或自訂類型智慧合併 Chrome 分頁群組 (Tab Groups)。",
+    "description": "擴充功能描述"
+  },
+  "cmdCleanDuplicates": {
+    "message": "一鍵關閉重複分頁",
+    "description": "關閉重複分頁快捷鍵描述"
+  },
+  "cmdGroupTabsByDomain": {
+    "message": "依網域合併分頁群組",
+    "description": "依網域分組快捷鍵描述"
+  },
+  "brandTitle": {
+    "message": "Tab Purger & Grouper",
+    "description": "標題列品牌名稱"
+  },
+  "brandSubtitle": {
+    "message": "分頁清理與群組整理助手",
+    "description": "標題列副標題"
+  },
+  "titlePreferences": {
+    "message": "偏好設定",
+    "description": "設定按鈕提示文字"
+  },
+  "scopeCurrentWindow": {
+    "message": "目前視窗",
+    "description": "目前視窗範圍按鈕"
+  },
+  "scopeAllWindows": {
+    "message": "所有視窗",
+    "description": "所有視窗範圍按鈕"
+  },
+  "statTotalTabs": {
+    "message": "總分頁數",
+    "description": "統計項目：總分頁數"
+  },
+  "statDuplicates": {
+    "message": "重複分頁",
+    "description": "統計項目：重複分頁"
+  },
+  "statGroups": {
+    "message": "已分組數",
+    "description": "統計項目：已分組數"
+  },
+  "btnSmartClean": {
+    "message": "一鍵整理 (清理重複 + 網域分組)",
+    "description": "主功能按鈕文字"
+  },
+  "btnCloseDuplicates": {
+    "message": "關閉重複分頁",
+    "description": "關閉重複分頁按鈕"
+  },
+  "btnGroupByDomain": {
+    "message": "依網域分組",
+    "description": "依網域分組按鈕"
+  },
+  "btnGroupByCategory": {
+    "message": "依類型智慧分組",
+    "description": "依類型智慧分組按鈕"
+  },
+  "btnUngroupAll": {
+    "message": "解散所有分組",
+    "description": "解散所有分組按鈕"
+  },
+  "previewTitle": {
+    "message": "重複分頁清單",
+    "description": "重複分頁預覽收合標題"
+  },
+  "previewEmpty": {
+    "message": "目前沒有發現重複分頁 🎉",
+    "description": "無重複分頁提示"
+  },
+  "btnQuickClose": {
+    "message": "關閉",
+    "description": "單組快速關閉按鈕"
+  },
+  "btnQuickCloseTitle": {
+    "message": "關閉此組的重複分頁",
+    "description": "單組快速關閉按鈕提示"
+  },
+  "badgeKept": {
+    "message": "保留",
+    "description": "保留分頁徽章"
+  },
+  "badgeToClose": {
+    "message": "將關閉",
+    "description": "即將關閉分頁徽章"
+  },
+  "tabPrefix": {
+    "message": "分頁 #$INDEX$",
+    "description": "分頁序號標籤",
+    "placeholders": {
+      "index": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "settingsTitle": {
+    "message": "偏好設定",
+    "description": "設定抽屜標題"
+  },
+  "btnCloseSettings": {
+    "message": "關閉設定",
+    "description": "關閉設定按鈕提示"
+  },
+  "setGroupDuplicateRules": {
+    "message": "重複分頁判定規則",
+    "description": "重複規則群組標題"
+  },
+  "setIgnoreHash": {
+    "message": "忽略網址錨點 (Hash #)",
+    "description": "忽略錨點設定標籤"
+  },
+  "setIgnoreHashDesc": {
+    "message": "例：page#section 與 page 視為相同",
+    "description": "忽略錨點說明"
+  },
+  "setIgnoreTracking": {
+    "message": "忽略常見追蹤參數",
+    "description": "忽略追蹤碼設定標籤"
+  },
+  "setIgnoreTrackingDesc": {
+    "message": "移除 utm_*, fbclid, gclid 等廣告追蹤碼",
+    "description": "忽略追蹤碼說明"
+  },
+  "setIgnoreQuery": {
+    "message": "忽略所有網址參數 (?)",
+    "description": "忽略全部 query 設定標籤"
+  },
+  "setIgnoreQueryDesc": {
+    "message": "只比對主路徑，忽略所有 URL Query",
+    "description": "忽略全部 query 說明"
+  },
+  "setIgnoreTrailingSlash": {
+    "message": "忽略結尾斜線 (/)",
+    "description": "忽略結尾斜線設定標籤"
+  },
+  "setIgnoreTrailingSlashDesc": {
+    "message": "例：site.com/blog/ 與 site.com/blog 視為相同",
+    "description": "忽略結尾斜線說明"
+  },
+  "setGroupPreserve": {
+    "message": "分頁保留與安全規則",
+    "description": "保留規則群組標題"
+  },
+  "setKeepStrategy": {
+    "message": "重複時優先保留",
+    "description": "保留策略標籤"
+  },
+  "setKeepStrategyDesc": {
+    "message": "選擇要留下的分頁",
+    "description": "保留策略說明"
+  },
+  "optEarliest": {
+    "message": "最早開啟的分頁",
+    "description": "最早開啟分頁選項"
+  },
+  "optActive": {
+    "message": "目前使用中的分頁",
+    "description": "目前使用中分頁選項"
+  },
+  "optLatest": {
+    "message": "最新開啟的分頁",
+    "description": "最新開啟分頁選項"
+  },
+  "setExcludePinned": {
+    "message": "保護釘選分頁",
+    "description": "保護釘選分頁標籤"
+  },
+  "setExcludePinnedDesc": {
+    "message": "釘選的分頁一律不自動關閉",
+    "description": "保護釘選分頁說明"
+  },
+  "setGroupTabGroups": {
+    "message": "群組設定 (Tab Groups)",
+    "description": "群組設定群組標題"
+  },
+  "setMinTabsPerGroup": {
+    "message": "成組最低分頁數",
+    "description": "成組最低數量標籤"
+  },
+  "setMinTabsPerGroupDesc": {
+    "message": "達此數量時才建立群組",
+    "description": "成組最低數量說明"
+  },
+  "optMin1": {
+    "message": "1 個分頁 (全部群組化)",
+    "description": "最低 1 個選項"
+  },
+  "optMin2": {
+    "message": "2 個分頁 (推薦)",
+    "description": "最低 2 個選項"
+  },
+  "optMin3": {
+    "message": "3 個分頁以上",
+    "description": "最低 3 個選項"
+  },
+  "setUseMainDomain": {
+    "message": "依主網域聚合",
+    "description": "依主網域聚合標籤"
+  },
+  "setUseMainDomainDesc": {
+    "message": "將 mail.google.com 與 google.com 合併",
+    "description": "依主網域聚合說明"
+  },
+  "setCollapseGroups": {
+    "message": "建立群組後自動摺疊",
+    "description": "自動摺疊群組標籤"
+  },
+  "setCollapseGroupsDesc": {
+    "message": "收合已分組的分頁以保持介面乾淨",
+    "description": "自動摺疊群組說明"
+  },
+  "btnResetSettings": {
+    "message": "恢復預設值",
+    "description": "重設設定按鈕"
+  },
+  "shortcutTip": {
+    "message": "快捷鍵：Alt+Shift+D 清除重複 ｜ Alt+Shift+G 網域分組",
+    "description": "快捷鍵提示文字"
+  },
+  "categoryAiSearch": {
+    "message": "🔍 搜尋與 AI",
+    "description": "搜尋與AI類別名稱"
+  },
+  "categoryDevelopment": {
+    "message": "💼 開發與技術",
+    "description": "開發與技術類別名稱"
+  },
+  "categorySocial": {
+    "message": "💬 社群與通訊",
+    "description": "社群與通訊類別名稱"
+  },
+  "categoryMedia": {
+    "message": "🎬 影音與串流",
+    "description": "影音與串流類別名稱"
+  },
+  "categoryDocs": {
+    "message": "📝 文件與協作",
+    "description": "文件與協作類別名稱"
+  },
+  "categoryShopping": {
+    "message": "🛒 購物與電商",
+    "description": "購物與電商類別名稱"
+  },
+  "categoryNews": {
+    "message": "📰 新聞與閱讀",
+    "description": "新聞與閱讀類別名稱"
+  },
+  "domainChrome": {
+    "message": "Chrome 系統頁面",
+    "description": "Chrome內部系統分頁"
+  },
+  "domainLocalFile": {
+    "message": "本地檔案 (file://)",
+    "description": "本地檔案標籤"
+  },
+  "domainOther": {
+    "message": "其他",
+    "description": "其他未知網域標籤"
+  },
+  "toastSmartCleanDone": {
+    "message": "整理完成！關閉 $CLOSED$ 個重複，建立 $GROUPS$ 個群組",
+    "description": "一鍵整理完成提示",
+    "placeholders": {
+      "closed": { "content": "$1" },
+      "groups": { "content": "$2" }
+    }
+  },
+  "toastClosedDuplicates": {
+    "message": "已成功關閉 $COUNT$ 個重複分頁！",
+    "description": "關閉重複分頁成功提示",
+    "placeholders": {
+      "count": { "content": "$1" }
+    }
+  },
+  "toastCreatedGroups": {
+    "message": "已建立 $GROUPS$ 個分頁群組 ($TABS$ 個分頁)！",
+    "description": "建立網域群組提示",
+    "placeholders": {
+      "groups": { "content": "$1" },
+      "tabs": { "content": "$2" }
+    }
+  },
+  "toastCreatedCategoryGroups": {
+    "message": "已依類型建立 $GROUPS$ 個分頁群組 ($TABS$ 個分頁)！",
+    "description": "建立類別群組提示",
+    "placeholders": {
+      "groups": { "content": "$1" },
+      "tabs": { "content": "$2" }
+    }
+  },
+  "toastUngroupedAll": {
+    "message": "已解散所有分頁群組 ($TABS$ 個分頁)！",
+    "description": "解散群組提示",
+    "placeholders": {
+      "tabs": { "content": "$1" }
+    }
+  },
+  "toastNoDuplicates": {
+    "message": "沒有發現重複分頁",
+    "description": "無重複分頁提示"
+  },
+  "toastAlreadyClean": {
+    "message": "分頁已是最整潔狀態！",
+    "description": "已是最整潔狀態提示"
+  },
+  "toastNoGroups": {
+    "message": "目前沒有任何分組分頁",
+    "description": "無分組分頁提示"
+  },
+  "toastThresholdNotMet": {
+    "message": "未達分組門檻 (至少需 $COUNT$ 個同網域分頁)",
+    "description": "未達分組門檻提示",
+    "placeholders": {
+      "count": { "content": "$1" }
+    }
+  },
+  "toastSettingsReset": {
+    "message": "設定已恢復為預設值",
+    "description": "恢復預設值提示"
+  },
+  "toastActionError": {
+    "message": "處理時發生錯誤",
+    "description": "操作錯誤提示"
+  },
+  "badgeDuplicatesTitle": {
+    "message": "發現 $COUNT$ 個重複分頁 - 點擊清理",
+    "description": "瀏覽器圖示提示",
+    "placeholders": {
+      "count": { "content": "$1" }
+    }
+  }
+}
