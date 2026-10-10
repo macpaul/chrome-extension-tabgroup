@@ -1,0 +1,340 @@
+{
+  "appName": {
+    "message": "Tab Purger & Grouper",
+    "description": "The name of the extension"
+  },
+  "appDesc": {
+    "message": "One-click clean duplicate tabs and smartly group tabs by domain or category using Chrome Tab Groups.",
+    "description": "The description of the extension"
+  },
+  "cmdCleanDuplicates": {
+    "message": "One-click close duplicate tabs",
+    "description": "Shortcut command description for closing duplicates"
+  },
+  "cmdGroupTabsByDomain": {
+    "message": "Group tabs by domain",
+    "description": "Shortcut command description for grouping tabs by domain"
+  },
+  "brandTitle": {
+    "message": "Tab Purger & Grouper",
+    "description": "App header brand title"
+  },
+  "brandSubtitle": {
+    "message": "Tab Purger & Group Assistant",
+    "description": "App header brand subtitle"
+  },
+  "titlePreferences": {
+    "message": "Preferences",
+    "description": "Tooltip for settings button"
+  },
+  "scopeCurrentWindow": {
+    "message": "Current Window",
+    "description": "Scope button for current window"
+  },
+  "scopeAllWindows": {
+    "message": "All Windows",
+    "description": "Scope button for all windows"
+  },
+  "statTotalTabs": {
+    "message": "Total Tabs",
+    "description": "Stat label for total tabs"
+  },
+  "statDuplicates": {
+    "message": "Duplicates",
+    "description": "Stat label for duplicate tabs"
+  },
+  "statGroups": {
+    "message": "Groups",
+    "description": "Stat label for active tab groups"
+  },
+  "btnSmartClean": {
+    "message": "Smart Clean (Duplicates + Domain Groups)",
+    "description": "Primary action button label"
+  },
+  "btnCloseDuplicates": {
+    "message": "Close Duplicates",
+    "description": "Button to close duplicate tabs"
+  },
+  "btnGroupByDomain": {
+    "message": "Group by Domain",
+    "description": "Button to group tabs by domain"
+  },
+  "btnGroupByCategory": {
+    "message": "Group by Category",
+    "description": "Button to group tabs by smart category"
+  },
+  "btnUngroupAll": {
+    "message": "Ungroup All",
+    "description": "Button to ungroup all tab groups"
+  },
+  "previewTitle": {
+    "message": "Duplicate Tabs List",
+    "description": "Accordion header for duplicate list"
+  },
+  "previewEmpty": {
+    "message": "No duplicate tabs found 🎉",
+    "description": "Empty state message when no duplicates"
+  },
+  "btnQuickClose": {
+    "message": "Close",
+    "description": "Quick close button for single duplicate group"
+  },
+  "btnQuickCloseTitle": {
+    "message": "Close duplicates in this group",
+    "description": "Tooltip for quick close button"
+  },
+  "badgeKept": {
+    "message": "Kept",
+    "description": "Badge indicator for the retained tab"
+  },
+  "badgeToClose": {
+    "message": "Will Close",
+    "description": "Badge indicator for tabs to close"
+  },
+  "tabPrefix": {
+    "message": "Tab #$INDEX$",
+    "description": "Tab index display label",
+    "placeholders": {
+      "index": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "settingsTitle": {
+    "message": "Preferences",
+    "description": "Settings drawer title"
+  },
+  "btnCloseSettings": {
+    "message": "Close settings",
+    "description": "Button title to close settings"
+  },
+  "setGroupDuplicateRules": {
+    "message": "Duplicate Detection Rules",
+    "description": "Section header for duplicate rules"
+  },
+  "setIgnoreHash": {
+    "message": "Ignore URL Hash (#)",
+    "description": "Setting label to ignore url hash"
+  },
+  "setIgnoreHashDesc": {
+    "message": "e.g., page#sec1 and page are treated as identical",
+    "description": "Description for ignore hash"
+  },
+  "setIgnoreTracking": {
+    "message": "Ignore Tracking Parameters",
+    "description": "Setting label to ignore tracking parameters"
+  },
+  "setIgnoreTrackingDesc": {
+    "message": "Strip utm_*, fbclid, gclid and advertising tags",
+    "description": "Description for ignore tracking"
+  },
+  "setIgnoreQuery": {
+    "message": "Ignore All Query Parameters (?)",
+    "description": "Setting label to ignore all query parameters"
+  },
+  "setIgnoreQueryDesc": {
+    "message": "Match path only, ignoring all URL query strings",
+    "description": "Description for ignore query"
+  },
+  "setIgnoreTrailingSlash": {
+    "message": "Ignore Trailing Slash (/)",
+    "description": "Setting label to ignore trailing slash"
+  },
+  "setIgnoreTrailingSlashDesc": {
+    "message": "e.g., site.com/blog/ and site.com/blog are treated as identical",
+    "description": "Description for ignore trailing slash"
+  },
+  "setGroupPreserve": {
+    "message": "Tab Retention & Safety Rules",
+    "description": "Section header for tab preservation"
+  },
+  "setKeepStrategy": {
+    "message": "Priority Tab to Keep",
+    "description": "Label for tab keeping strategy"
+  },
+  "setKeepStrategyDesc": {
+    "message": "Choose which duplicate tab to retain",
+    "description": "Description for keep strategy"
+  },
+  "optEarliest": {
+    "message": "Earliest opened tab",
+    "description": "Option to keep earliest opened tab"
+  },
+  "optActive": {
+    "message": "Currently active tab",
+    "description": "Option to keep active tab"
+  },
+  "optLatest": {
+    "message": "Latest opened tab",
+    "description": "Option to keep latest opened tab"
+  },
+  "setExcludePinned": {
+    "message": "Protect Pinned Tabs",
+    "description": "Label to protect pinned tabs"
+  },
+  "setExcludePinnedDesc": {
+    "message": "Never close pinned tabs automatically",
+    "description": "Description for pinned tab protection"
+  },
+  "setGroupTabGroups": {
+    "message": "Tab Groups Settings",
+    "description": "Section header for tab groups"
+  },
+  "setMinTabsPerGroup": {
+    "message": "Min Tabs per Group",
+    "description": "Label for minimum tabs threshold"
+  },
+  "setMinTabsPerGroupDesc": {
+    "message": "Create group only when count is met",
+    "description": "Description for min tabs threshold"
+  },
+  "optMin1": {
+    "message": "1 tab (Group all)",
+    "description": "Option for threshold 1"
+  },
+  "optMin2": {
+    "message": "2 tabs (Recommended)",
+    "description": "Option for threshold 2"
+  },
+  "optMin3": {
+    "message": "3 or more tabs",
+    "description": "Option for threshold 3"
+  },
+  "setUseMainDomain": {
+    "message": "Aggregate by Root Domain",
+    "description": "Label for root domain grouping"
+  },
+  "setUseMainDomainDesc": {
+    "message": "Merge mail.google.com and google.com",
+    "description": "Description for root domain grouping"
+  },
+  "setCollapseGroups": {
+    "message": "Auto-collapse Groups",
+    "description": "Label to auto-collapse tab groups"
+  },
+  "setCollapseGroupsDesc": {
+    "message": "Collapse groups to save tab bar space",
+    "description": "Description for collapsing tab groups"
+  },
+  "btnResetSettings": {
+    "message": "Reset to Defaults",
+    "description": "Button label to reset settings"
+  },
+  "shortcutTip": {
+    "message": "Shortcuts: Alt+Shift+D Clean Duplicates | Alt+Shift+G Group Tabs",
+    "description": "Shortcut tip footer text"
+  },
+  "categoryAiSearch": {
+    "message": "🔍 Search & AI",
+    "description": "Category name for search and AI"
+  },
+  "categoryDevelopment": {
+    "message": "💼 Development",
+    "description": "Category name for development"
+  },
+  "categorySocial": {
+    "message": "💬 Social & Chat",
+    "description": "Category name for social networks"
+  },
+  "categoryMedia": {
+    "message": "🎬 Media & Streaming",
+    "description": "Category name for media and streaming"
+  },
+  "categoryDocs": {
+    "message": "📝 Docs & Workspace",
+    "description": "Category name for documents and collaboration"
+  },
+  "categoryShopping": {
+    "message": "🛒 Shopping",
+    "description": "Category name for shopping and ecommerce"
+  },
+  "categoryNews": {
+    "message": "📰 News & Reading",
+    "description": "Category name for news and reading"
+  },
+  "domainChrome": {
+    "message": "Chrome System Pages",
+    "description": "Label for internal chrome URLs"
+  },
+  "domainLocalFile": {
+    "message": "Local Files (file://)",
+    "description": "Label for local files"
+  },
+  "domainOther": {
+    "message": "Other",
+    "description": "Fallback domain label"
+  },
+  "toastSmartCleanDone": {
+    "message": "Organized! Closed $CLOSED$ duplicates, created $GROUPS$ groups.",
+    "description": "Toast message for smart clean completion",
+    "placeholders": {
+      "closed": { "content": "$1" },
+      "groups": { "content": "$2" }
+    }
+  },
+  "toastClosedDuplicates": {
+    "message": "Successfully closed $COUNT$ duplicate tabs!",
+    "description": "Toast message for closing duplicates",
+    "placeholders": {
+      "count": { "content": "$1" }
+    }
+  },
+  "toastCreatedGroups": {
+    "message": "Created $GROUPS$ tab groups ($TABS$ tabs)!",
+    "description": "Toast message for domain grouping",
+    "placeholders": {
+      "groups": { "content": "$1" },
+      "tabs": { "content": "$2" }
+    }
+  },
+  "toastCreatedCategoryGroups": {
+    "message": "Created $GROUPS$ category groups ($TABS$ tabs)!",
+    "description": "Toast message for category grouping",
+    "placeholders": {
+      "groups": { "content": "$1" },
+      "tabs": { "content": "$2" }
+    }
+  },
+  "toastUngroupedAll": {
+    "message": "Ungrouped all tab groups ($TABS$ tabs)!",
+    "description": "Toast message for ungrouping all tabs",
+    "placeholders": {
+      "tabs": { "content": "$1" }
+    }
+  },
+  "toastNoDuplicates": {
+    "message": "No duplicate tabs found.",
+    "description": "Toast message when no duplicates exist"
+  },
+  "toastAlreadyClean": {
+    "message": "Tabs are already clean and organized!",
+    "description": "Toast message when everything is clean"
+  },
+  "toastNoGroups": {
+    "message": "No grouped tabs currently.",
+    "description": "Toast message when no groups exist"
+  },
+  "toastThresholdNotMet": {
+    "message": "Threshold not met (needs at least $COUNT$ tabs per site).",
+    "description": "Toast message when min tabs threshold is not reached",
+    "placeholders": {
+      "count": { "content": "$1" }
+    }
+  },
+  "toastSettingsReset": {
+    "message": "Settings have been reset to defaults.",
+    "description": "Toast message when settings are reset"
+  },
+  "toastActionError": {
+    "message": "An error occurred while processing.",
+    "description": "Toast message when error occurs"
+  },
+  "badgeDuplicatesTitle": {
+    "message": "Found $COUNT$ duplicate tabs - click to clean",
+    "description": "Tooltip for extension action button when duplicates exist",
+    "placeholders": {
+      "count": { "content": "$1" }
+    }
+  }
+}
