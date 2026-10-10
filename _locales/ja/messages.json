@@ -1,0 +1,340 @@
+{
+  "appName": {
+    "message": "Tab Purger & Grouper - タブ整理＆グループ化",
+    "description": "拡張機能の名前"
+  },
+  "appDesc": {
+    "message": "重複したタブをワンクリックで整理し、ドメインやカテゴリごとにChromeタブグループへ自動分類します。",
+    "description": "拡張機能の説明"
+  },
+  "cmdCleanDuplicates": {
+    "message": "重複タブを閉じる",
+    "description": "重複タブを閉じるショートカットの説明"
+  },
+  "cmdGroupTabsByDomain": {
+    "message": "ドメインごとにタブをグループ化",
+    "description": "ドメイン別グループ化ショートカットの説明"
+  },
+  "brandTitle": {
+    "message": "Tab Purger & Grouper",
+    "description": "ヘッダーのタイトル"
+  },
+  "brandSubtitle": {
+    "message": "タブ整理＆グループ化アシスタント",
+    "description": "ヘッダーのサブタイトル"
+  },
+  "titlePreferences": {
+    "message": "設定",
+    "description": "設定ボタンのツールチップ"
+  },
+  "scopeCurrentWindow": {
+    "message": "現在のウィンドウ",
+    "description": "現在のウィンドウ選択ボタン"
+  },
+  "scopeAllWindows": {
+    "message": "すべてのウィンドウ",
+    "description": "すべてのウィンドウ選択ボタン"
+  },
+  "statTotalTabs": {
+    "message": "総タブ数",
+    "description": "総タブ数のラベル"
+  },
+  "statDuplicates": {
+    "message": "重複タブ",
+    "description": "重複タブ数のラベル"
+  },
+  "statGroups": {
+    "message": "グループ数",
+    "description": "タブグループ数のラベル"
+  },
+  "btnSmartClean": {
+    "message": "スマート整理 (重複削除 + ドメイン別グループ)",
+    "description": "メインアクションボタンのテキスト"
+  },
+  "btnCloseDuplicates": {
+    "message": "重複タブを閉じる",
+    "description": "重複タブ削除ボタン"
+  },
+  "btnGroupByDomain": {
+    "message": "ドメイン別にグループ化",
+    "description": "ドメイン別グループ化ボタン"
+  },
+  "btnGroupByCategory": {
+    "message": "カテゴリ別にグループ化",
+    "description": "カテゴリ別スマートグループ化ボタン"
+  },
+  "btnUngroupAll": {
+    "message": "全グループを解除",
+    "description": "全グループ解除ボタン"
+  },
+  "previewTitle": {
+    "message": "重複タブ一覧",
+    "description": "重複タブ一覧のアコーディオンタイトル"
+  },
+  "previewEmpty": {
+    "message": "重複しているタブはありません 🎉",
+    "description": "重複タブがない時のメッセージ"
+  },
+  "btnQuickClose": {
+    "message": "閉じる",
+    "description": "クイック削除ボタン"
+  },
+  "btnQuickCloseTitle": {
+    "message": "このグループの重複タブを閉じる",
+    "description": "クイック削除ボタンのツールチップ"
+  },
+  "badgeKept": {
+    "message": "維持",
+    "description": "維持するタブのバッジ"
+  },
+  "badgeToClose": {
+    "message": "削除対象",
+    "description": "閉じる対象タブのバッジ"
+  },
+  "tabPrefix": {
+    "message": "タブ #$INDEX$",
+    "description": "タブ番号表示",
+    "placeholders": {
+      "index": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "settingsTitle": {
+    "message": "設定",
+    "description": "設定ドロワーのタイトル"
+  },
+  "btnCloseSettings": {
+    "message": "設定を閉じる",
+    "description": "設定閉じるボタンのツールチップ"
+  },
+  "setGroupDuplicateRules": {
+    "message": "重複判定ルール",
+    "description": "重複ルールグループヘッダー"
+  },
+  "setIgnoreHash": {
+    "message": "URLハッシュを無視 (#)",
+    "description": "ハッシュ無視設定ラベル"
+  },
+  "setIgnoreHashDesc": {
+    "message": "例: page#section と page を同一とみなします",
+    "description": "ハッシュ無視設定の説明"
+  },
+  "setIgnoreTracking": {
+    "message": "トラッキングパラメータを無視",
+    "description": "トラッキングタグ無視ラベル"
+  },
+  "setIgnoreTrackingDesc": {
+    "message": "utm_*, fbclid, gclid などの追跡パラメータを削除",
+    "description": "トラッキングタグ無視の説明"
+  },
+  "setIgnoreQuery": {
+    "message": "すべてのURLクエリを無視 (?)",
+    "description": "クエリ無視設定ラベル"
+  },
+  "setIgnoreQueryDesc": {
+    "message": "パスのみを比較し、URLクエリ文字列全体を無視",
+    "description": "クエリ無視設定の説明"
+  },
+  "setIgnoreTrailingSlash": {
+    "message": "末尾のスラッシュを無視 (/)",
+    "description": "末尾スラッシュ無視ラベル"
+  },
+  "setIgnoreTrailingSlashDesc": {
+    "message": "例: site.com/blog/ と site.com/blog を同一視",
+    "description": "末尾スラッシュ無視の説明"
+  },
+  "setGroupPreserve": {
+    "message": "タブ保持および安全ルール",
+    "description": "タブ保持ルールグループヘッダー"
+  },
+  "setKeepStrategy": {
+    "message": "優先して残すタブ",
+    "description": "優先保持タブのラベル"
+  },
+  "setKeepStrategyDesc": {
+    "message": "残すタブの条件を選択",
+    "description": "優先保持タブの説明"
+  },
+  "optEarliest": {
+    "message": "最初に開いたタブ",
+    "description": "最初に開いたタブの選択肢"
+  },
+  "optActive": {
+    "message": "現在アクティブなタブ",
+    "description": "アクティブタブの選択肢"
+  },
+  "optLatest": {
+    "message": "最後に開いたタブ",
+    "description": "最後に開いたタブの選択肢"
+  },
+  "setExcludePinned": {
+    "message": "固定されたタブを保護",
+    "description": "固定タブ保護設定ラベル"
+  },
+  "setExcludePinnedDesc": {
+    "message": "ピン留めされたタブは自動で閉じません",
+    "description": "固定タブ保護設定の説明"
+  },
+  "setGroupTabGroups": {
+    "message": "タブグループ設定",
+    "description": "タブグループ設定ヘッダー"
+  },
+  "setMinTabsPerGroup": {
+    "message": "グループ化に必要な最小タブ数",
+    "description": "最小タブ数ラベル"
+  },
+  "setMinTabsPerGroupDesc": {
+    "message": "この数に達した場合にのみグループを作成",
+    "description": "最小タブ数の説明"
+  },
+  "optMin1": {
+    "message": "1 タブ (すべてグループ化)",
+    "description": "1タブ選択肢"
+  },
+  "optMin2": {
+    "message": "2 タブ (推奨)",
+    "description": "2タブ選択肢"
+  },
+  "optMin3": {
+    "message": "3 タブ以上",
+    "description": "3タブ以上選択肢"
+  },
+  "setUseMainDomain": {
+    "message": "メインドメインでまとめる",
+    "description": "メインドメイン集約ラベル"
+  },
+  "setUseMainDomainDesc": {
+    "message": "mail.google.com と google.com を統合",
+    "description": "メインドメイン集約の説明"
+  },
+  "setCollapseGroups": {
+    "message": "作成後にグループを自動折りたたみ",
+    "description": "自動折りたたみラベル"
+  },
+  "setCollapseGroupsDesc": {
+    "message": "タブバーをすっきりと保つためにグループを折りたたむ",
+    "description": "自動折りたたみの説明"
+  },
+  "btnResetSettings": {
+    "message": "初期設定に戻す",
+    "description": "設定初期化ボタン"
+  },
+  "shortcutTip": {
+    "message": "ショートカット: Alt+Shift+D 重複削除 ｜ Alt+Shift+G ドメイングループ化",
+    "description": "ショートカットヒント"
+  },
+  "categoryAiSearch": {
+    "message": "🔍 検索・AI",
+    "description": "検索・AIカテゴリ名"
+  },
+  "categoryDevelopment": {
+    "message": "💼 開発・技術",
+    "description": "開発カテゴリ名"
+  },
+  "categorySocial": {
+    "message": "💬 SNS・チャット",
+    "description": "SNSカテゴリ名"
+  },
+  "categoryMedia": {
+    "message": "🎬 動画・配信",
+    "description": "動画カテゴリ名"
+  },
+  "categoryDocs": {
+    "message": "📝 ドキュメント・共同作業",
+    "description": "文書カテゴリ名"
+  },
+  "categoryShopping": {
+    "message": "🛒 ショッピング",
+    "description": "ショッピングカテゴリ名"
+  },
+  "categoryNews": {
+    "message": "📰 ニュース・読書",
+    "description": "ニュースカテゴリ名"
+  },
+  "domainChrome": {
+    "message": "Chrome システムページ",
+    "description": "Chrome内部ページ"
+  },
+  "domainLocalFile": {
+    "message": "ローカルファイル (file://)",
+    "description": "ローカルファイルラベル"
+  },
+  "domainOther": {
+    "message": "その他",
+    "description": "その他ドメインラベル"
+  },
+  "toastSmartCleanDone": {
+    "message": "整理完了！重複 $CLOSED$ 件を削除し、$GROUPS$ 個のグループを作成しました",
+    "description": "スマート整理完了トースト",
+    "placeholders": {
+      "closed": { "content": "$1" },
+      "groups": { "content": "$2" }
+    }
+  },
+  "toastClosedDuplicates": {
+    "message": "$COUNT$ 件の重複タブを閉じました！",
+    "description": "重複削除成功トースト",
+    "placeholders": {
+      "count": { "content": "$1" }
+    }
+  },
+  "toastCreatedGroups": {
+    "message": "$GROUPS$ 個のグループ ($TABS$ タブ) を作成しました！",
+    "description": "ドメイングループ作成トースト",
+    "placeholders": {
+      "groups": { "content": "$1" },
+      "tabs": { "content": "$2" }
+    }
+  },
+  "toastCreatedCategoryGroups": {
+    "message": "カテゴリ別に $GROUPS$ 個のグループ ($TABS$ タブ) を作成しました！",
+    "description": "カテゴリグループ作成トースト",
+    "placeholders": {
+      "groups": { "content": "$1" },
+      "tabs": { "content": "$2" }
+    }
+  },
+  "toastUngroupedAll": {
+    "message": "すべてのグループ ($TABS$ タブ) を解除しました！",
+    "description": "グループ解除トースト",
+    "placeholders": {
+      "tabs": { "content": "$1" }
+    }
+  },
+  "toastNoDuplicates": {
+    "message": "重複しているタブはありません",
+    "description": "重複なしトースト"
+  },
+  "toastAlreadyClean": {
+    "message": "タブはすでに整理されています！",
+    "description": "整理済みトースト"
+  },
+  "toastNoGroups": {
+    "message": "グループ化されたタブはありません",
+    "description": "グループなしトースト"
+  },
+  "toastThresholdNotMet": {
+    "message": "グループ化の基準に達していません (同じサイトで最低 $COUNT$ タブ必要)",
+    "description": "基準未達トースト",
+    "placeholders": {
+      "count": { "content": "$1" }
+    }
+  },
+  "toastSettingsReset": {
+    "message": "設定を初期状態に戻しました",
+    "description": "設定リセットトースト"
+  },
+  "toastActionError": {
+    "message": "処理中にエラーが発生しました",
+    "description": "エラー時トースト"
+  },
+  "badgeDuplicatesTitle": {
+    "message": "$COUNT$ 件の重複タブが見つかりました - クリックして整理",
+    "description": "バッジツールチップ",
+    "placeholders": {
+      "count": { "content": "$1" }
+    }
+  }
+}
