@@ -2,6 +2,8 @@
  * URL Utilities for Tab Purger & Grouper
  */
 
+import { getMessage } from './i18n.js';
+
 export const TAB_GROUP_COLORS = [
   'blue',
   'cyan',
@@ -40,7 +42,8 @@ export const COMMON_TRACKING_PARAMS = new Set([
 export const CATEGORY_DEFINITIONS = [
   {
     id: 'ai_search',
-    name: '🔍 搜尋與 AI',
+    nameKey: 'categoryAiSearch',
+    defaultName: '🔍 Search & AI',
     color: 'blue',
     patterns: [
       /^(www\.)?google\.(com|com\.[a-z]{2}|[a-z]{2})$/i,
@@ -57,7 +60,8 @@ export const CATEGORY_DEFINITIONS = [
   },
   {
     id: 'development',
-    name: '💼 開發與技術',
+    nameKey: 'categoryDevelopment',
+    defaultName: '💼 Development',
     color: 'cyan',
     patterns: [
       /^(www\.)?github\.com$/i,
@@ -77,7 +81,8 @@ export const CATEGORY_DEFINITIONS = [
   },
   {
     id: 'social',
-    name: '💬 社群與通訊',
+    nameKey: 'categorySocial',
+    defaultName: '💬 Social & Chat',
     color: 'pink',
     patterns: [
       /^(www\.)?twitter\.com$/i,
@@ -95,7 +100,8 @@ export const CATEGORY_DEFINITIONS = [
   },
   {
     id: 'media',
-    name: '🎬 影音與串流',
+    nameKey: 'categoryMedia',
+    defaultName: '🎬 Media & Streaming',
     color: 'red',
     patterns: [
       /^(www\.)?youtube\.com$/i,
@@ -112,7 +118,8 @@ export const CATEGORY_DEFINITIONS = [
   },
   {
     id: 'docs',
-    name: '📝 文件與協作',
+    nameKey: 'categoryDocs',
+    defaultName: '📝 Docs & Workspace',
     color: 'purple',
     patterns: [
       /^(www\.)?notion\.so$/i,
@@ -129,7 +136,8 @@ export const CATEGORY_DEFINITIONS = [
   },
   {
     id: 'shopping',
-    name: '🛒 購物與電商',
+    nameKey: 'categoryShopping',
+    defaultName: '🛒 Shopping',
     color: 'yellow',
     patterns: [
       /^(www\.)?amazon\.(com|com\.[a-z]{2}|[a-z]{2})$/i,
@@ -144,7 +152,8 @@ export const CATEGORY_DEFINITIONS = [
   },
   {
     id: 'news',
-    name: '📰 新聞與閱讀',
+    nameKey: 'categoryNews',
+    defaultName: '📰 News & Reading',
     color: 'green',
     patterns: [
       /^(www\.)?bbc\.com$/i,
@@ -243,16 +252,16 @@ const MULTI_PART_TLDS = new Set([
 export function extractDomain(rawUrl, options = {}) {
   const { useMainDomain = false } = options;
 
-  if (!rawUrl) return '其他';
+  if (!rawUrl) return getMessage('domainOther', [], 'Other');
 
   try {
     const url = new URL(rawUrl);
 
     if (url.protocol === 'chrome:' || url.protocol === 'chrome-extension:') {
-      return 'Chrome 系統頁面';
+      return getMessage('domainChrome', [], 'Chrome System Pages');
     }
     if (url.protocol === 'file:') {
-      return '本地檔案 (file://)';
+      return getMessage('domainLocalFile', [], 'Local File (file://)');
     }
 
     let hostname = url.hostname.toLowerCase();
@@ -261,7 +270,7 @@ export function extractDomain(rawUrl, options = {}) {
     }
 
     if (!useMainDomain) {
-      return hostname || '其他';
+      return hostname || getMessage('domainOther', [], 'Other');
     }
 
     // Main domain resolution (e.g. drive.google.com -> google.com)
@@ -280,7 +289,7 @@ export function extractDomain(rawUrl, options = {}) {
 
     return parts.slice(-2).join('.');
   } catch {
-    return '其他';
+    return getMessage('domainOther', [], 'Other');
   }
 }
 
@@ -303,7 +312,7 @@ export function categorizeTab(rawUrl, title = '', options = {}) {
         if (pattern.test(hostname)) {
           return {
             id: cat.id,
-            name: cat.name,
+            name: getMessage(cat.nameKey, [], cat.defaultName),
             color: cat.color,
             isCategory: true
           };
