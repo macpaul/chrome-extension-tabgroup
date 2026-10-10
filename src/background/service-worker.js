@@ -11,6 +11,7 @@ import {
   DEFAULT_SETTINGS,
   getTabStats
 } from '../utils/tabs.js';
+import { getMessage } from '../utils/i18n.js';
 
 // Initialize default settings on installation
 chrome.runtime.onInstalled.addListener(async (details) => {
@@ -28,12 +29,16 @@ async function updateBadge() {
       await chrome.action.setBadgeText({ text: String(stats.duplicateCount) });
       await chrome.action.setBadgeBackgroundColor({ color: '#EF4444' }); // Red badge for duplicates
       await chrome.action.setTitle({
-        title: `發現 ${stats.duplicateCount} 個重複分頁 - 點擊清理`
+        title: getMessage(
+          'badgeDuplicatesTitle',
+          [String(stats.duplicateCount)],
+          `Found ${stats.duplicateCount} duplicate tabs - click to clean`
+        )
       });
     } else {
       await chrome.action.setBadgeText({ text: '' });
       await chrome.action.setTitle({
-        title: 'Tab Purger & Grouper - 分頁清理與群組助手'
+        title: getMessage('appName', [], 'Tab Purger & Grouper')
       });
     }
   } catch (err) {
