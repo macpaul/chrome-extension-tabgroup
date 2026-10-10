@@ -13,6 +13,8 @@ import {
   DEFAULT_SETTINGS
 } from '../utils/tabs.js';
 
+import { getMessage, applyI18nToDOM } from '../utils/i18n.js';
+
 let settings = { ...DEFAULT_SETTINGS };
 let toastTimer = null;
 
@@ -153,14 +155,20 @@ async function refreshDashboard() {
  * Render duplicate tabs preview list
  */
 function renderDuplicatePreview(groups) {
-  previewGroupCount.textContent = `(${groups.length} 組)`;
+  previewGroupCount.textContent = `(${groups.length})`;
 
   if (!groups || groups.length === 0) {
-    previewListContent.innerHTML = '<div class="preview-empty">目前沒有發現重複分頁 🎉</div>';
+    const emptyMsg = getMessage('previewEmpty', [], 'No duplicate tabs found 🎉');
+    previewListContent.innerHTML = `<div class="preview-empty">${emptyMsg}</div>`;
     return;
   }
 
   previewListContent.innerHTML = '';
+
+  const labelKept = getMessage('badgeKept', [], 'Kept');
+  const labelToClose = getMessage('badgeToClose', [], 'Will Close');
+  const labelCloseBtn = getMessage('btnQuickClose', [], 'Close');
+  const labelCloseTitle = getMessage('btnQuickCloseTitle', [], 'Close duplicates in this group');
 
   for (const group of groups) {
     const itemEl = document.createElement('div');
@@ -182,13 +190,13 @@ function renderDuplicatePreview(groups) {
 
     const quickCloseBtn = document.createElement('button');
     quickCloseBtn.className = 'btn btn-danger btn-sm';
-    quickCloseBtn.textContent = '關閉';
-    quickCloseBtn.title = '關閉此組的重複分頁';
+    quickCloseBtn.textContent = labelCloseBtn;
+    quickCloseBtn.title = labelCloseTitle;
     quickCloseBtn.addEventListener('click', async (e) => {
       e.stopPropagation();
       const tabIdsToClose = group.toClose.map((t) => t.id);
       await chrome.tabs.remove(tabIdsToClose);
-      showToast(`已關閉 ${tabIdsToClose.length} 個重複分頁`);
+      showToast(getMessage('toastClosedDuplicates', [String(tabIdsToClose.length)]));
       await refreshDashboard();
     });
 
@@ -206,9 +214,10 @@ function renderDuplicatePreview(groups) {
     // Kept tab row
     const keptRow = document.createElement('div');
     keptRow.className = 'dup-tab-row';
+    const keptPrefix = getMessage('tabPrefix', [String(group.toKeep.index + 1)], `Tab #${group.toKeep.index + 1}`);
     keptRow.innerHTML = `
-      <span>分頁 #${group.toKeep.index + 1}</span>
-      <span class="tab-badge kept">保留</span>
+      <span>${keptPrefix}</span>
+      <span class="tab-badge kept">${labelKept}</span>
     `;
     tabsListEl.appendChild(keptRow);
 
@@ -216,9 +225,10 @@ function renderDuplicatePreview(groups) {
     for (const closeTab of group.toClose) {
       const closeRow = document.createElement('div');
       closeRow.className = 'dup-tab-row';
+      const closePrefix = getMessage('tabPrefix', [String(closeTab.index + 1)], `Tab #${closeTab.index + 1}`);
       closeRow.innerHTML = `
-        <span>分頁 #${closeTab.index + 1}</span>
-        <span class="tab-badge to-close">將關閉</span>
+        <span>${closePrefix}</span>
+        <span class="tab-badge to-close">${labelToClose}</span>
       `;
       tabsListEl.appendChild(closeRow);
     }
@@ -240,20 +250,20 @@ btnSmartClean.addEventListener('click', async () => {
 
     let message = '';
     if (dupRes.closedCount > 0 && grpRes.groupsCreated > 0) {
-      message = `整理完成！關閉 ${dupRes.closedCount} 個重複，建立 ${grpRes.groupsCreated} 個群組`;
+      message = getMessage('toastSmartCleanDone', [String(dupRes.closedCount), String(grpRes.groupsCreated)]);
     } else if (dupRes.closedCount > 0) {
-      message = `已關閉 ${dupRes.closedCount} 個重複分頁`;
+      message = getMessage('toastClosedDuplicates', [String(dupRes.closedCount)]);
     } else if (grpRes.groupsCreated > 0) {
-      message = `已建立 ${grpRes.groupsCreated} 個分頁群組 (${grpRes.tabsGrouped} 個分頁)`;
+      message = getMessage('toastCreatedGroups', [String(grpRes.groupsCreated), String(grpRes.tabsGrouped)]);
     } else {
-      message = '分頁已是最整潔狀態！';
+      message = getMessage('toastAlreadyClean');
     }
 
     showToast(message);
     await refreshDashboard();
   } catch (err) {
     console.error('Smart clean error:', err);
-    showToast('整理時發生錯誤');
+    showToast(getMessage('toastActionError'));
   } finally {
     btnSmartClean.disabled = false;
   }
@@ -264,14 +274,14 @@ btnCloseDuplicates.addEventListener('click', async () => {
   try {
     const res = await closeDuplicateTabs(settings);
     if (res.closedCount > 0) {
-      showToast(`已成功關閉 ${res.closedCount} 個重複分頁！`);
+      showToast(getMessage('toastClosedDuplicates', [String(res.closedCount)]));
     } else {
-      showToast('沒有發現重複分頁');
+      showToast(getMessage('toastNoDuplicates'));
     }
     await refreshDashboard();
   } catch (err) {
     console.error('Close duplicates error:', err);
-    showToast('關閉重複分頁失敗');
+    showToast(getMessage('toastActionError'));
   } finally {
     btnCloseDuplicates.disabled = false;
   }
@@ -282,14 +292,14 @@ btnGroupByDomain.addEventListener('click', async () => {
   try {
     const res = await groupTabsByDomain(settings);
     if (res.groupsCreated > 0) {
-      showToast(`已建立 ${res.groupsCreated} 個群組 (${res.tabsGrouped} 個分頁)`);
+      showToast(getMessage('toastCreatedGroups', [String(res.groupsCreated), String(res.tabsGrouped)]));
     } else {
-      showToast('未達分組門檻 (至少需 2 個同網域分頁)');
+      showToast(getMessage('toastThresholdNotMet', [String(settings.minTabsPerGroup)]));
     }
     await refreshDashboard();
   } catch (err) {
     console.error('Group by domain error:', err);
-    showToast('網域分組失敗');
+    showToast(getMessage('toastActionError'));
   } finally {
     btnGroupByDomain.disabled = false;
   }
@@ -300,14 +310,14 @@ btnGroupByCategory.addEventListener('click', async () => {
   try {
     const res = await groupTabsByCategory(settings);
     if (res.groupsCreated > 0) {
-      showToast(`已依類型建立 ${res.groupsCreated} 個群組 (${res.tabsGrouped} 個分頁)`);
+      showToast(getMessage('toastCreatedCategoryGroups', [String(res.groupsCreated), String(res.tabsGrouped)]));
     } else {
-      showToast('未達分組門檻或未匹配特定類型');
+      showToast(getMessage('toastThresholdNotMet', [String(settings.minTabsPerGroup)]));
     }
     await refreshDashboard();
   } catch (err) {
     console.error('Group by category error:', err);
-    showToast('智慧分組失敗');
+    showToast(getMessage('toastActionError'));
   } finally {
     btnGroupByCategory.disabled = false;
   }
@@ -318,14 +328,14 @@ btnUngroupAll.addEventListener('click', async () => {
   try {
     const res = await ungroupAllTabs(settings.scope);
     if (res.ungroupedCount > 0) {
-      showToast(`已解散所有分頁群組 (${res.ungroupedCount} 個分頁)`);
+      showToast(getMessage('toastUngroupedAll', [String(res.ungroupedCount)]));
     } else {
-      showToast('目前沒有任何分組分頁');
+      showToast(getMessage('toastNoGroups'));
     }
     await refreshDashboard();
   } catch (err) {
     console.error('Ungroup error:', err);
-    showToast('解散分組失敗');
+    showToast(getMessage('toastActionError'));
   } finally {
     btnUngroupAll.disabled = false;
   }
@@ -365,7 +375,7 @@ btnResetSettings.addEventListener('click', async () => {
   await saveSettings(settings);
   await initSettingsUI();
   await refreshDashboard();
-  showToast('設定已恢復為預設值');
+  showToast(getMessage('toastSettingsReset'));
 });
 
 // Auto-save setting changes on input
@@ -387,6 +397,7 @@ settingInputs.forEach((input) => {
 
 // Initialize on popup load
 document.addEventListener('DOMContentLoaded', async () => {
+  applyI18nToDOM();
   await initSettingsUI();
   await refreshDashboard();
 });
