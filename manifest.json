@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Purger & Grouper - 分頁清理與群組助手",
+  "version": "1.0.0",
+  "description": "一鍵清理重複分頁，並支援依網域或自訂類型智慧合併 Chrome 分頁群組 (Tab Groups)。",
+  "permissions": [
+    "tabs",
+    "tabGroups",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "background": {
+    "service_worker": "src/background/service-worker.js"
+  },
+  "commands": {
+    "clean-duplicates": {
+      "suggested_key": {
+        "default": "Alt+Shift+D",
+        "mac": "Alt+Shift+D"
+      },
+      "description": "一鍵關閉重複分頁"
+    },
+    "group-tabs-by-domain": {
+      "suggested_key": {
+        "default": "Alt+Shift+G",
+        "mac": "Alt+Shift+G"
+      },
+      "description": "依網域合併分頁群組"
+    }
+  }
+}
