@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Chrome Extension build / temporary files
+*.crx
+*.pem
+
+# Dependencies / IDE
+node_modules/
+.vscode/
+.idea/
