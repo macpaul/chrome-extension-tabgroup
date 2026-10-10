@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tab Purger & Grouper</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="header-brand">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="3" ry="3"/>
+            <path d="M3 9h18"/>
+            <path d="M9 21V9"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <h1 class="brand-title">Tab Purger & Grouper</h1>
+          <span class="brand-subtitle">分頁清理與群組整理助手</span>
+        </div>
+      </div>
+      <button id="btnSettingsToggle" class="icon-btn" title="偏好設定" aria-label="偏好設定">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/>
+          <circle cx="12" cy="12" r="3"/>
+        </svg>
+      </button>
+    </header>
+
+    <!-- Scope Selector -->
+    <div class="scope-container">
+      <div class="scope-segmented">
+        <button id="scopeCurrent" class="scope-btn active" data-scope="currentWindow">目前視窗</button>
+        <button id="scopeAll" class="scope-btn" data-scope="allWindows">所有視窗</button>
+      </div>
+    </div>
+
+    <!-- Stats Dashboard -->
+    <section class="stats-card">
+      <div class="stat-item">
+        <span class="stat-value" id="statTotalTabs">-</span>
+        <span class="stat-label">總分頁數</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item stat-duplicates" id="statDupContainer">
+        <span class="stat-value" id="statDuplicates">-</span>
+        <span class="stat-label">重複分頁</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-value" id="statGroups">-</span>
+        <span class="stat-label">已分組數</span>
+      </div>
+    </section>
+
+    <!-- Main Action: Smart Clean & Organize -->
+    <div class="primary-action-wrap">
+      <button id="btnSmartClean" class="btn btn-primary btn-large">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+        </svg>
+        <span>一鍵整理 (清理重複 + 網域分組)</span>
+      </button>
+    </div>
+
+    <!-- Action Buttons Grid -->
+    <section class="actions-grid">
+      <button id="btnCloseDuplicates" class="btn btn-danger">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="3 6 5 6 21 6"/>
+          <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+          <line x1="10" y1="11" x2="10" y2="17"/>
+          <line x1="14" y1="11" x2="14" y2="17"/>
+        </svg>
+        <span>關閉重複分頁</span>
+        <span class="action-badge" id="btnDupBadge" style="display: none;">0</span>
+      </button>
+
+      <button id="btnGroupByDomain" class="btn btn-secondary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+        </svg>
+        <span>依網域分組</span>
+      </button>
+
+      <button id="btnGroupByCategory" class="btn btn-secondary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
+          <line x1="7" y1="7" x2="7.01" y2="7"/>
+        </svg>
+        <span>依類型智慧分組</span>
+      </button>
+
+      <button id="btnUngroupAll" class="btn btn-subtle">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="7" height="7"/>
+          <rect x="14" y="3" width="7" height="7"/>
+          <rect x="14" y="14" width="7" height="7"/>
+          <rect x="3" y="14" width="7" height="7"/>
+        </svg>
+        <span>解散所有分組</span>
+      </button>
+    </section>
+
+    <!-- Duplicate Preview Section -->
+    <section class="preview-card" id="duplicatePreviewSection">
+      <div class="preview-header" id="btnTogglePreview">
+        <div class="preview-title">
+          <span class="preview-indicator"></span>
+          <span>重複分頁清單</span>
+          <span class="preview-count" id="previewGroupCount">(0 組)</span>
+        </div>
+        <svg class="chevron-icon" id="previewChevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </div>
+      <div class="preview-content" id="previewListContent">
+        <!-- Rendered dynamically -->
+        <div class="preview-empty">目前沒有發現重複分頁 🎉</div>
+      </div>
+    </section>
+
+    <!-- Settings Drawer / Modal -->
+    <div class="settings-drawer" id="settingsDrawer">
+      <div class="settings-header">
+        <h2 class="settings-title">偏好設定</h2>
+        <button id="btnCloseSettings" class="icon-btn" title="關閉設定">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+      <div class="settings-body">
+        <div class="setting-group">
+          <div class="setting-group-title">重複分頁判定規則</div>
+          <label class="setting-item">
+            <div class="setting-info">
+              <span class="setting-name">忽略網址錨點 (Hash #)</span>
+              <span class="setting-desc">例：page#section 與 page 視為相同</span>
+            </div>
+            <input type="checkbox" id="setIgnoreHash" class="toggle-checkbox">
+          </label>
+
+          <label class="setting-item">
+            <div class="setting-info">
+              <span class="setting-name">忽略常見追蹤參數</span>
+              <span class="setting-desc">移除 utm_*, fbclid, gclid 等廣告追蹤碼</span>
+            </div>
+            <input type="checkbox" id="setIgnoreTracking" class="toggle-checkbox">
+          </label>
+
+          <label class="setting-item">
+            <div class="setting-info">
+              <span class="setting-name">忽略所有網址參數 (?)</span>
+              <span class="setting-desc">只比對主路徑，忽略所有 URL Query</span>
+            </div>
+            <input type="checkbox" id="setIgnoreQuery" class="toggle-checkbox">
+          </label>
+
+          <label class="setting-item">
+            <div class="setting-info">
+              <span class="setting-name">忽略結尾斜線 (/)</span>
+              <span class="setting-desc">例：site.com/blog/ 與 site.com/blog 視為相同</span>
+            </div>
+            <input type="checkbox" id="setIgnoreTrailingSlash" class="toggle-checkbox">
+          </label>
+        </div>
+
+        <div class="setting-group">
+          <div class="setting-group-title">分頁保留與安全規則</div>
+          <div class="setting-item-select">
+            <div class="setting-info">
+              <span class="setting-name">重複時優先保留</span>
+              <span class="setting-desc">選擇要留下的分頁</span>
+            </div>
+            <select id="setKeepStrategy" class="setting-select">
+              <option value="earliest">最早開啟的分頁</option>
+              <option value="active">目前使用中的分頁</option>
+              <option value="latest">最新開啟的分頁</option>
+            </select>
+          </div>
+
+          <label class="setting-item">
+            <div class="setting-info">
+              <span class="setting-name">保護釘選分頁</span>
+              <span class="setting-desc">釘選的分頁一律不自動關閉</span>
+            </div>
+            <input type="checkbox" id="setExcludePinned" class="toggle-checkbox">
+          </label>
+        </div>
+
+        <div class="setting-group">
+          <div class="setting-group-title">群組設定 (Tab Groups)</div>
+          <div class="setting-item-select">
+            <div class="setting-info">
+              <span class="setting-name">成組最低分頁數</span>
+              <span class="setting-desc">達此數量時才建立群組</span>
+            </div>
+            <select id="setMinTabsPerGroup" class="setting-select">
+              <option value="1">1 個分頁 (全部群組化)</option>
+              <option value="2">2 個分頁 (推薦)</option>
+              <option value="3">3 個分頁以上</option>
+            </select>
+          </div>
+
+          <label class="setting-item">
+            <div class="setting-info">
+              <span class="setting-name">依主網域聚合</span>
+              <span class="setting-desc">將 mail.google.com 與 google.com 合併</span>
+            </div>
+            <input type="checkbox" id="setUseMainDomain" class="toggle-checkbox">
+          </label>
+
+          <label class="setting-item">
+            <div class="setting-info">
+              <span class="setting-name">建立群組後自動摺疊</span>
+              <span class="setting-desc">收合已分組的分頁以保持介面乾淨</span>
+            </div>
+            <input type="checkbox" id="setCollapseGroups" class="toggle-checkbox">
+          </label>
+        </div>
+      </div>
+      <div class="settings-footer">
+        <button id="btnResetSettings" class="btn btn-subtle btn-sm">恢復預設值</button>
+      </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toastNotification" class="toast-notification"></div>
+
+    <!-- Footer Shortcuts Info -->
+    <footer class="app-footer">
+      <span class="shortcut-tip">快捷鍵：<kbd>Alt+Shift+D</kbd> 清除重複 ｜ <kbd>Alt+Shift+G</kbd> 網域分組</span>
+    </footer>
+  </div>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
