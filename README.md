@@ -2,6 +2,8 @@
 
 一款專為 Google Chrome 設計的 Manifest V3 擴充功能，能夠一鍵偵測並關閉重複開啟的網站分頁，同時支援將同類型或同網域的分頁自動合併成 Chrome Tab Groups 分頁群組，讓瀏覽器隨時保持乾淨整齊。
 
+支援多國語言（i18n）：繁體中文 (zh_TW)、簡體中文 (zh_CN)、日本語 (ja)、한국어 (ko)、English (en)、Français (fr)、Deutsch (de)。
+
 ---
 
 ## ✨ 核心特色與功能
@@ -36,13 +38,23 @@
   - 支援建立群組後自動摺疊，一鍵釋放分頁列空間。
   - 提供「一鍵解散所有分組」還原功能。
 
-### 3. ⚡ 一鍵智慧整理 (Smart Clean)
+### 3. 🌐 完整國際化支援 (i18n)
+- 內建 7 種語言支援，自動根據瀏覽器偏好切換：
+  - 繁體中文 (Traditional Chinese, `zh_TW`)
+  - 簡體中文 (Simplified Chinese, `zh_CN`)
+  - 日本語 (Japanese, `ja`)
+  - 한국어 (Korean, `ko`)
+  - English (English, `en`)
+  - Français (French, `fr`)
+  - Deutsch (German, `de`)
+
+### 4. ⚡ 一鍵智慧整理 (Smart Clean)
 - 同步執行「清理重複分頁」與「依網域分組」，一步完成瀏覽器大掃除。
 
-### 4. 🪟 彈性視窗範圍切換
+### 5. 🪟 彈性視窗範圍切換
 - 可隨時在「**目前視窗**」與「**所有視窗**」之間自由切換處理範圍。
 
-### 5. ⌨️ 快捷鍵即時操作
+### 6. ⌨️ 快捷鍵即時操作
 - `Alt + Shift + D`：快速關閉重複分頁
 - `Alt + Shift + G`：快速依網域建立群組
 
@@ -52,7 +64,7 @@
 
 1. 下載或複製本專案至本機資料夾：
    ```bash
-   git clone <repo-url>
+   git clone git@github.com:macpaul/chrome-extension-tabgroup.git
    ```
 2. 開啟 Google Chrome 瀏覽器，在網址列輸入並前往：
    ```text
@@ -69,8 +81,17 @@
 
 ```text
 ├── .gitignore                    # Git 忽略檔案設定
+├── LICENSE                       # GNU General Public License v3.0 (GPLv3)
 ├── manifest.json                 # Chrome Extension Manifest V3 設定檔
 ├── README.md                     # 專案說明與使用手冊
+├── _locales/                     # 國際化語系檔案 (i18n)
+│   ├── de/messages.json          # 德文
+│   ├── en/messages.json          # 英文 (預設語系)
+│   ├── fr/messages.json          # 法文
+│   ├── ja/messages.json          # 日文
+│   ├── ko/messages.json          # 韓文
+│   ├── zh_CN/messages.json       # 簡體中文
+│   └── zh_TW/messages.json       # 繁體中文
 ├── icons/                        # 各解析度擴充功能圖示
 │   ├── icon-16.png
 │   ├── icon-48.png
@@ -83,6 +104,7 @@
     │   ├── popup.css             # 現代質感樣式（支援深色/淺色模式）
     │   └── popup.js              # 彈出視窗互動與資料綁定邏輯
     └── utils/
+        ├── i18n.js               # 國際化橋接與自動 DOM 翻譯模組
         ├── url.js                # 網址正規化、網域解析與類型匹配模組
         └── tabs.js               # 分頁查詢、去重比對、分組與儲存管理核心
 ```
@@ -109,4 +131,4 @@
 
 ## 📜 授權許可
 
-本專案採 MIT 授權條款釋出。
+本專案採 [GNU General Public License v3.0 (GPLv3)](LICENSE) 授權條款釋出。
