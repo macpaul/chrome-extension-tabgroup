@@ -1,0 +1,340 @@
+{
+  "appName": {
+    "message": "Tab Purger & Grouper - 탭 정리 및 그룹 도우미",
+    "description": "확장 프로그램 이름"
+  },
+  "appDesc": {
+    "message": "원클릭으로 중복 탭을 정리하고 도메인 또는 카테고리별로 Chrome 탭 그룹으로 스마트하게 통합합니다.",
+    "description": "확장 프로그램 설명"
+  },
+  "cmdCleanDuplicates": {
+    "message": "원클릭 중복 탭 닫기",
+    "description": "중복 탭 닫기 단축키 설명"
+  },
+  "cmdGroupTabsByDomain": {
+    "message": "도메인별로 탭 그룹화",
+    "description": "도메인별 그룹화 단축키 설명"
+  },
+  "brandTitle": {
+    "message": "Tab Purger & Grouper",
+    "description": "앱 상단 브랜드 제목"
+  },
+  "brandSubtitle": {
+    "message": "탭 정리 및 그룹화 도우미",
+    "description": "앱 상단 부제목"
+  },
+  "titlePreferences": {
+    "message": "환경설정",
+    "description": "설정 버튼 툴팁"
+  },
+  "scopeCurrentWindow": {
+    "message": "현재 창",
+    "description": "현재 창 범위 버튼"
+  },
+  "scopeAllWindows": {
+    "message": "모든 창",
+    "description": "모든 창 범위 버튼"
+  },
+  "statTotalTabs": {
+    "message": "전체 탭 수",
+    "description": "전체 탭 통계 라벨"
+  },
+  "statDuplicates": {
+    "message": "중복 탭",
+    "description": "중복 탭 통계 라벨"
+  },
+  "statGroups": {
+    "message": "그룹 수",
+    "description": "그룹 수 통계 라벨"
+  },
+  "btnSmartClean": {
+    "message": "스마트 정리 (중복 제거 + 도메인 그룹)",
+    "description": "메인 정리 버튼 라벨"
+  },
+  "btnCloseDuplicates": {
+    "message": "중복 탭 닫기",
+    "description": "중복 탭 닫기 버튼"
+  },
+  "btnGroupByDomain": {
+    "message": "도메인별 그룹화",
+    "description": "도메인별 그룹화 버튼"
+  },
+  "btnGroupByCategory": {
+    "message": "카테고리별 스마트 그룹화",
+    "description": "카테고리별 스마트 그룹화 버튼"
+  },
+  "btnUngroupAll": {
+    "message": "모든 그룹 해제",
+    "description": "모든 그룹 해제 버튼"
+  },
+  "previewTitle": {
+    "message": "중복 탭 목록",
+    "description": "중복 탭 미리보기 아코디언 제목"
+  },
+  "previewEmpty": {
+    "message": "중복된 탭이 없습니다 🎉",
+    "description": "중복 탭 없음 안내"
+  },
+  "btnQuickClose": {
+    "message": "닫기",
+    "description": "단일 그룹 빠른 닫기 버튼"
+  },
+  "btnQuickCloseTitle": {
+    "message": "이 그룹의 중복 탭 닫기",
+    "description": "단일 그룹 빠른 닫기 툴팁"
+  },
+  "badgeKept": {
+    "message": "유지",
+    "description": "유지할 탭 뱃지"
+  },
+  "badgeToClose": {
+    "message": "닫을 예정",
+    "description": "닫을 예정 탭 뱃지"
+  },
+  "tabPrefix": {
+    "message": "탭 #$INDEX$",
+    "description": "탭 번호 표시",
+    "placeholders": {
+      "index": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "settingsTitle": {
+    "message": "환경설정",
+    "description": "설정 서랍 제목"
+  },
+  "btnCloseSettings": {
+    "message": "설정 닫기",
+    "description": "설정 닫기 버튼 툴팁"
+  },
+  "setGroupDuplicateRules": {
+    "message": "중복 판정 규칙",
+    "description": "중복 판정 규칙 헤더"
+  },
+  "setIgnoreHash": {
+    "message": "URL 해시 무시 (#)",
+    "description": "URL 해시 무시 라벨"
+  },
+  "setIgnoreHashDesc": {
+    "message": "예: page#section과 page를 동일하게 처리",
+    "description": "URL 해시 무시 설명"
+  },
+  "setIgnoreTracking": {
+    "message": "추적 파라미터 무시",
+    "description": "추적 파라미터 무시 라벨"
+  },
+  "setIgnoreTrackingDesc": {
+    "message": "utm_*, fbclid, gclid 등 광고 추적 태그 제거",
+    "description": "추적 파라미터 무시 설명"
+  },
+  "setIgnoreQuery": {
+    "message": "모든 URL 쿼리 무시 (?)",
+    "description": "모든 쿼리 무시 라벨"
+  },
+  "setIgnoreQueryDesc": {
+    "message": "경로만 비교하고 모든 쿼리 문자열 무시",
+    "description": "모든 쿼리 무시 설명"
+  },
+  "setIgnoreTrailingSlash": {
+    "message": "끝 슬래시 무시 (/)",
+    "description": "끝 슬래시 무시 라벨"
+  },
+  "setIgnoreTrailingSlashDesc": {
+    "message": "예: site.com/blog/ 와 site.com/blog 를 동일하게 처리",
+    "description": "끝 슬래시 무시 설명"
+  },
+  "setGroupPreserve": {
+    "message": "탭 유지 및 안전 규칙",
+    "description": "탭 유지 및 안전 규칙 헤더"
+  },
+  "setKeepStrategy": {
+    "message": "우선 유지할 탭",
+    "description": "탭 유지 전략 라벨"
+  },
+  "setKeepStrategyDesc": {
+    "message": "남겨둘 탭의 조건을 선택",
+    "description": "탭 유지 전략 설명"
+  },
+  "optEarliest": {
+    "message": "가장 먼저 열린 탭",
+    "description": "가장 먼저 열린 탭 옵션"
+  },
+  "optActive": {
+    "message": "현재 활성화된 탭",
+    "description": "현재 활성화된 탭 옵션"
+  },
+  "optLatest": {
+    "message": "가장 최근에 열린 탭",
+    "description": "가장 최근에 열린 탭 옵션"
+  },
+  "setExcludePinned": {
+    "message": "고정된 탭 보호",
+    "description": "고정된 탭 보호 라벨"
+  },
+  "setExcludePinnedDesc": {
+    "message": "고정된 탭은 자동으로 닫지 않음",
+    "description": "고정된 탭 보호 설명"
+  },
+  "setGroupTabGroups": {
+    "message": "탭 그룹 설정",
+    "description": "탭 그룹 설정 헤더"
+  },
+  "setMinTabsPerGroup": {
+    "message": "그룹 생성 최소 탭 수",
+    "description": "최소 탭 수 라벨"
+  },
+  "setMinTabsPerGroupDesc": {
+    "message": "이 수량에 도달할 때만 그룹 생성",
+    "description": "최소 탭 수 설명"
+  },
+  "optMin1": {
+    "message": "1개 탭 (모두 그룹화)",
+    "description": "1개 탭 옵션"
+  },
+  "optMin2": {
+    "message": "2개 탭 (권장)",
+    "description": "2개 탭 옵션"
+  },
+  "optMin3": {
+    "message": "3개 탭 이상",
+    "description": "3개 이상 옵션"
+  },
+  "setUseMainDomain": {
+    "message": "루트 도메인별 통합",
+    "description": "루트 도메인별 통합 라벨"
+  },
+  "setUseMainDomainDesc": {
+    "message": "mail.google.com과 google.com 병합",
+    "description": "루트 도메인별 통합 설명"
+  },
+  "setCollapseGroups": {
+    "message": "생성 후 그룹 자동 접기",
+    "description": "그룹 자동 접기 라벨"
+  },
+  "setCollapseGroupsDesc": {
+    "message": "탭 표시줄을 깔끔하게 유지하기 위해 접기",
+    "description": "그룹 자동 접기 설명"
+  },
+  "btnResetSettings": {
+    "message": "기본값으로 복원",
+    "description": "설정 초기화 버튼"
+  },
+  "shortcutTip": {
+    "message": "단축키: Alt+Shift+D 중복 정리 ｜ Alt+Shift+G 도메인 그룹화",
+    "description": "단축키 팁"
+  },
+  "categoryAiSearch": {
+    "message": "🔍 검색 및 AI",
+    "description": "검색 및 AI 카테고리"
+  },
+  "categoryDevelopment": {
+    "message": "💼 개발 및 기술",
+    "description": "개발 카테고리"
+  },
+  "categorySocial": {
+    "message": "💬 소셜 및 채팅",
+    "description": "소셜 카테고리"
+  },
+  "categoryMedia": {
+    "message": "🎬 미디어 및 스트리밍",
+    "description": "미디어 카테고리"
+  },
+  "categoryDocs": {
+    "message": "📝 문서 및 협업",
+    "description": "문서 카테고리"
+  },
+  "categoryShopping": {
+    "message": "🛒 쇼핑 및 이커머스",
+    "description": "쇼핑 카테고리"
+  },
+  "categoryNews": {
+    "message": "📰 뉴스 및 읽을거리",
+    "description": "뉴스 카테고리"
+  },
+  "domainChrome": {
+    "message": "Chrome 시스템 페이지",
+    "description": "Chrome 시스템 페이지 라벨"
+  },
+  "domainLocalFile": {
+    "message": "로컬 파일 (file://)",
+    "description": "로컬 파일 라벨"
+  },
+  "domainOther": {
+    "message": "기타",
+    "description": "기타 도메인 라벨"
+  },
+  "toastSmartCleanDone": {
+    "message": "정리 완료! 중복 탭 $CLOSED$개 닫음, 그룹 $GROUPS$개 생성",
+    "description": "스마트 정리 완료 토스트",
+    "placeholders": {
+      "closed": { "content": "$1" },
+      "groups": { "content": "$2" }
+    }
+  },
+  "toastClosedDuplicates": {
+    "message": "중복 탭 $COUNT$개를 성공적으로 닫았습니다!",
+    "description": "중복 닫기 성공 토스트",
+    "placeholders": {
+      "count": { "content": "$1" }
+    }
+  },
+  "toastCreatedGroups": {
+    "message": "탭 그룹 $GROUPS$개 생성 ($TABS$개 탭)!",
+    "description": "도메인 그룹 생성 토스트",
+    "placeholders": {
+      "groups": { "content": "$1" },
+      "tabs": { "content": "$2" }
+    }
+  },
+  "toastCreatedCategoryGroups": {
+    "message": "카테고리별 그룹 $GROUPS$개 생성 ($TABS$개 탭)!",
+    "description": "카테고리 그룹 생성 토스트",
+    "placeholders": {
+      "groups": { "content": "$1" },
+      "tabs": { "content": "$2" }
+    }
+  },
+  "toastUngroupedAll": {
+    "message": "모든 탭 그룹 해제 완료 ($TABS$개 탭)!",
+    "description": "그룹 해제 토스트",
+    "placeholders": {
+      "tabs": { "content": "$1" }
+    }
+  },
+  "toastNoDuplicates": {
+    "message": "중복된 탭이 없습니다",
+    "description": "중복 없음 토스트"
+  },
+  "toastAlreadyClean": {
+    "message": "탭이 이미 가장 깔끔한 상태입니다!",
+    "description": "이미 깔끔함 토스트"
+  },
+  "toastNoGroups": {
+    "message": "현재 그룹화된 탭이 없습니다",
+    "description": "그룹 없음 토스트"
+  },
+  "toastThresholdNotMet": {
+    "message": "그룹화 기준 미달 (동일 사이트 최소 $COUNT$개 탭 필요)",
+    "description": "기준 미달 토스트",
+    "placeholders": {
+      "count": { "content": "$1" }
+    }
+  },
+  "toastSettingsReset": {
+    "message": "설정이 기본값으로 복원되었습니다",
+    "description": "설정 초기화 토스트"
+  },
+  "toastActionError": {
+    "message": "처리 중 오류가 발생했습니다",
+    "description": "오류 토스트"
+  },
+  "badgeDuplicatesTitle": {
+    "message": "중복 탭 $COUNT$개 발견 - 클릭하여 정리",
+    "description": "아이콘 툴팁",
+    "placeholders": {
+      "count": { "content": "$1" }
+    }
+  }
+}
