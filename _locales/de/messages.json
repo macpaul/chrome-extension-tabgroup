@@ -1,0 +1,340 @@
+{
+  "appName": {
+    "message": "Tab Purger & Grouper - Tab-Bereinigung & Gruppen",
+    "description": "Name der Erweiterung"
+  },
+  "appDesc": {
+    "message": "Bereinigen Sie doppelte Tabs mit einem Klick und gruppieren Sie Tabs intelligent nach Domain oder Kategorie mit Chrome Tab Groups.",
+    "description": "Beschreibung der Erweiterung"
+  },
+  "cmdCleanDuplicates": {
+    "message": "Doppelte Tabs mit einem Klick schließen",
+    "description": "Tastaturkürzel-Beschreibung zum Schließen doppelter Tabs"
+  },
+  "cmdGroupTabsByDomain": {
+    "message": "Tabs nach Domain gruppieren",
+    "description": "Tastaturkürzel-Beschreibung zum Gruppieren nach Domain"
+  },
+  "brandTitle": {
+    "message": "Tab Purger & Grouper",
+    "description": "Header Markentitel"
+  },
+  "brandSubtitle": {
+    "message": "Tab-Bereinigungs- und Gruppierungsassistent",
+    "description": "Header Untertitel"
+  },
+  "titlePreferences": {
+    "message": "Einstellungen",
+    "description": "Tooltip für den Einstellungen-Button"
+  },
+  "scopeCurrentWindow": {
+    "message": "Aktuelles Fenster",
+    "description": "Button für aktuelles Fenster"
+  },
+  "scopeAllWindows": {
+    "message": "Alle Fenster",
+    "description": "Button für alle Fenster"
+  },
+  "statTotalTabs": {
+    "message": "Gesamte Tabs",
+    "description": "Statistikbeschriftung für alle Tabs"
+  },
+  "statDuplicates": {
+    "message": "Doppelte Tabs",
+    "description": "Statistikbeschriftung für Duplikate"
+  },
+  "statGroups": {
+    "message": "Gruppen",
+    "description": "Statistikbeschriftung für Gruppen"
+  },
+  "btnSmartClean": {
+    "message": "Intelligente Bereinigung (Duplikate + Gruppen)",
+    "description": "Hauptaktionsbutton Beschriftung"
+  },
+  "btnCloseDuplicates": {
+    "message": "Doppelte Tabs schließen",
+    "description": "Button zum Schließen doppelter Tabs"
+  },
+  "btnGroupByDomain": {
+    "message": "Nach Domain gruppieren",
+    "description": "Button zum Gruppieren nach Domain"
+  },
+  "btnGroupByCategory": {
+    "message": "Nach Kategorie gruppieren",
+    "description": "Button zum Gruppieren nach Kategorie"
+  },
+  "btnUngroupAll": {
+    "message": "Alle Gruppen auflösen",
+    "description": "Button zum Auflösen aller Gruppen"
+  },
+  "previewTitle": {
+    "message": "Liste der doppelten Tabs",
+    "description": "Titel für Akkordeon der doppelten Tabs"
+  },
+  "previewEmpty": {
+    "message": "Keine doppelten Tabs gefunden 🎉",
+    "description": "Leere-Zustand-Nachricht"
+  },
+  "btnQuickClose": {
+    "message": "Schließen",
+    "description": "Schnellschließen-Button"
+  },
+  "btnQuickCloseTitle": {
+    "message": "Doppelte Tabs in dieser Gruppe schließen",
+    "description": "Tooltip für Schnellschließen"
+  },
+  "badgeKept": {
+    "message": "Behalten",
+    "description": "Badge für behaltenen Tab"
+  },
+  "badgeToClose": {
+    "message": "Wird geschlossen",
+    "description": "Badge für zu schließenden Tab"
+  },
+  "tabPrefix": {
+    "message": "Tab #$INDEX$",
+    "description": "Tab-Index-Anzeige",
+    "placeholders": {
+      "index": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "settingsTitle": {
+    "message": "Einstellungen",
+    "description": "Titel des Einstellungsbereichs"
+  },
+  "btnCloseSettings": {
+    "message": "Einstellungen schließen",
+    "description": "Button zum Schließen der Einstellungen"
+  },
+  "setGroupDuplicateRules": {
+    "message": "Erkennungsregeln für Duplikate",
+    "description": "Abschnittsüberschrift für Duplikatregeln"
+  },
+  "setIgnoreHash": {
+    "message": "URL-Hash ignorieren (#)",
+    "description": "Option URL-Hash ignorieren"
+  },
+  "setIgnoreHashDesc": {
+    "message": "z.B. seite#abschnitt und seite werden als identisch behandelt",
+    "description": "Beschreibung Hash ignorieren"
+  },
+  "setIgnoreTracking": {
+    "message": "Tracking-Parameter ignorieren",
+    "description": "Option Tracking ignorieren"
+  },
+  "setIgnoreTrackingDesc": {
+    "message": "utm_*, fbclid, gclid und Werbe-Tags entfernen",
+    "description": "Beschreibung Tracking ignorieren"
+  },
+  "setIgnoreQuery": {
+    "message": "Alle URL-Abfrageparameter ignorieren (?)",
+    "description": "Option alle Query-Parameter ignorieren"
+  },
+  "setIgnoreQueryDesc": {
+    "message": "Nur Hauptpfad abgleichen, URL-Query-Strings ignorieren",
+    "description": "Beschreibung alle Query-Parameter ignorieren"
+  },
+  "setIgnoreTrailingSlash": {
+    "message": "Abschließenden Schrägstrich ignorieren (/)",
+    "description": "Option Slash am Ende ignorieren"
+  },
+  "setIgnoreTrailingSlashDesc": {
+    "message": "z.B. seite.de/blog/ und seite.de/blog werden als identisch behandelt",
+    "description": "Beschreibung Slash ignorieren"
+  },
+  "setGroupPreserve": {
+    "message": "Beibehaltungs- und Sicherheitsregeln",
+    "description": "Abschnittsüberschrift Beibehaltungsregeln"
+  },
+  "setKeepStrategy": {
+    "message": "Priorität beim Behalten",
+    "description": "Option Beibehaltungsstrategie"
+  },
+  "setKeepStrategyDesc": {
+    "message": "Auswählen, welcher doppelte Tab behalten wird",
+    "description": "Beschreibung Beibehaltungsstrategie"
+  },
+  "optEarliest": {
+    "message": "Zuerst geöffneter Tab",
+    "description": "Option ältester Tab"
+  },
+  "optActive": {
+    "message": "Aktuell aktiver Tab",
+    "description": "Option aktiver Tab"
+  },
+  "optLatest": {
+    "message": "Zuletzt geöffneter Tab",
+    "description": "Option neuester Tab"
+  },
+  "setExcludePinned": {
+    "message": "Angeheftete Tabs schützen",
+    "description": "Option angeheftete Tabs schützen"
+  },
+  "setExcludePinnedDesc": {
+    "message": "Angeheftete Tabs niemals automatisch schließen",
+    "description": "Beschreibung angeheftete Tabs schützen"
+  },
+  "setGroupTabGroups": {
+    "message": "Tab-Gruppen-Einstellungen",
+    "description": "Abschnittsüberschrift Tab-Gruppen"
+  },
+  "setMinTabsPerGroup": {
+    "message": "Min. Tabs pro Gruppe",
+    "description": "Option Mindestanzahl an Tabs"
+  },
+  "setMinTabsPerGroupDesc": {
+    "message": "Gruppe erst ab dieser Anzahl erstellen",
+    "description": "Beschreibung Mindestanzahl"
+  },
+  "optMin1": {
+    "message": "1 Tab (Alle gruppieren)",
+    "description": "Option 1 Tab"
+  },
+  "optMin2": {
+    "message": "2 Tabs (Empfohlen)",
+    "description": "Option 2 Tabs"
+  },
+  "optMin3": {
+    "message": "3 oder mehr Tabs",
+    "description": "Option 3 oder mehr Tabs"
+  },
+  "setUseMainDomain": {
+    "message": "Nach Root-Domain zusammenfassen",
+    "description": "Option Root-Domain zusammenfassen"
+  },
+  "setUseMainDomainDesc": {
+    "message": "mail.google.com und google.com zusammenführen",
+    "description": "Beschreibung Root-Domain"
+  },
+  "setCollapseGroups": {
+    "message": "Gruppen autom. einklappen",
+    "description": "Option Gruppen einklappen"
+  },
+  "setCollapseGroupsDesc": {
+    "message": "Gruppen einklappen, um Platz in der Leiste zu sparen",
+    "description": "Beschreibung Gruppen einklappen"
+  },
+  "btnResetSettings": {
+    "message": "Auf Standard zurücksetzen",
+    "description": "Button zum Zurücksetzen"
+  },
+  "shortcutTip": {
+    "message": "Tastaturkürzel: Alt+Shift+D Duplikate löschen ｜ Alt+Shift+G Nach Domain gruppieren",
+    "description": "Tastaturkürzel-Hinweis"
+  },
+  "categoryAiSearch": {
+    "message": "🔍 Suche & KI",
+    "description": "Kategoriename Suche"
+  },
+  "categoryDevelopment": {
+    "message": "💼 Entwicklung",
+    "description": "Kategoriename Entwicklung"
+  },
+  "categorySocial": {
+    "message": "💬 Soziales & Chat",
+    "description": "Kategoriename Soziales"
+  },
+  "categoryMedia": {
+    "message": "🎬 Medien & Streaming",
+    "description": "Kategoriename Medien"
+  },
+  "categoryDocs": {
+    "message": "📝 Dokumente & Arbeit",
+    "description": "Kategoriename Dokumente"
+  },
+  "categoryShopping": {
+    "message": "🛒 Shopping & Handel",
+    "description": "Kategoriename Shopping"
+  },
+  "categoryNews": {
+    "message": "📰 Nachrichten & Lesen",
+    "description": "Kategoriename Nachrichten"
+  },
+  "domainChrome": {
+    "message": "Chrome Systemseiten",
+    "description": "Chrome interne Seiten"
+  },
+  "domainLocalFile": {
+    "message": "Lokale Datei (file://)",
+    "description": "Lokale Dateien"
+  },
+  "domainOther": {
+    "message": "Sonstiges",
+    "description": "Sonstige Domains"
+  },
+  "toastSmartCleanDone": {
+    "message": "Fertig! $CLOSED$ Duplikate geschlossen, $GROUPS$ Gruppen erstellt.",
+    "description": "Toast Bereinigung fertig",
+    "placeholders": {
+      "closed": { "content": "$1" },
+      "groups": { "content": "$2" }
+    }
+  },
+  "toastClosedDuplicates": {
+    "message": "$COUNT$ doppelte Tabs erfolgreich geschlossen!",
+    "description": "Toast Duplikate geschlossen",
+    "placeholders": {
+      "count": { "content": "$1" }
+    }
+  },
+  "toastCreatedGroups": {
+    "message": "$GROUPS$ Tab-Gruppen ($TABS$ Tabs) erstellt!",
+    "description": "Toast Gruppen erstellt",
+    "placeholders": {
+      "groups": { "content": "$1" },
+      "tabs": { "content": "$2" }
+    }
+  },
+  "toastCreatedCategoryGroups": {
+    "message": "$GROUPS$ Kategorie-Gruppen ($TABS$ Tabs) erstellt!",
+    "description": "Toast Kategoriegruppen erstellt",
+    "placeholders": {
+      "groups": { "content": "$1" },
+      "tabs": { "content": "$2" }
+    }
+  },
+  "toastUngroupedAll": {
+    "message": "Alle Gruppen aufgelöst ($TABS$ Tabs)!",
+    "description": "Toast Gruppen aufgelöst",
+    "placeholders": {
+      "tabs": { "content": "$1" }
+    }
+  },
+  "toastNoDuplicates": {
+    "message": "Keine doppelten Tabs gefunden.",
+    "description": "Toast keine Duplikate"
+  },
+  "toastAlreadyClean": {
+    "message": "Tabs sind bereits optimal organisiert!",
+    "description": "Toast bereits organisiert"
+  },
+  "toastNoGroups": {
+    "message": "Derzeit keine gruppierten Tabs.",
+    "description": "Toast keine Gruppen"
+  },
+  "toastThresholdNotMet": {
+    "message": "Mindestanzahl nicht erreicht (mind. $COUNT$ Tabs pro Domain erforderlich).",
+    "description": "Toast Mindestanzahl nicht erreicht",
+    "placeholders": {
+      "count": { "content": "$1" }
+    }
+  },
+  "toastSettingsReset": {
+    "message": "Einstellungen wurden auf Standard zurückgesetzt.",
+    "description": "Toast Einstellungen zurückgesetzt"
+  },
+  "toastActionError": {
+    "message": "Bei der Verarbeitung ist ein Fehler aufgetreten.",
+    "description": "Toast Fehler"
+  },
+  "badgeDuplicatesTitle": {
+    "message": "$COUNT$ doppelte Tabs gefunden - Klicken zum Bereinigen",
+    "description": "Badge Tooltip",
+    "placeholders": {
+      "count": { "content": "$1" }
+    }
+  }
+}
