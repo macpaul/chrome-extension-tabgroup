@@ -82,6 +82,9 @@
 ```text
 ├── .gitignore                    # Git 忽略檔案設定
 ├── LICENSE                       # GNU General Public License v3.0 (GPLv3)
+├── PRIVACY.md                    # 隱私權政策 (Chrome Web Store 必備)
+├── CHROMEWEBSTORE.md             # 商店上架文案與權限審查指南
+├── package.sh                    # 依 Git Tag 自動打包上架 ZIP 工具
 ├── manifest.json                 # Chrome Extension Manifest V3 設定檔
 ├── README.md                     # 專案說明與使用手冊
 ├── _locales/                     # 國際化語系檔案 (i18n)
@@ -108,6 +111,22 @@
         ├── url.js                # 網址正規化、網域解析與類型匹配模組
         └── tabs.js               # 分頁查詢、去重比對、分組與儲存管理核心
 ```
+
+---
+
+## 📦 打包發佈 (Packaging)
+
+若需要將擴充功能發佈至 Chrome 線上應用程式商店，可使用內建的自動打包指令：
+
+```bash
+# 依特定 Git Tag 打包 (例如 v0.1)：
+./package.sh v0.1
+
+# 或是直接執行，依互動選單選擇已有的 Tag：
+./package.sh
+```
+
+指令會直接從該 Tag 的 Git 樹中擷取純生產環境檔案，並於 `dist/` 目錄下產出標準上架 ZIP 壓縮檔（例如 `dist/tab-purger-grouper-v0.1.zip`）。詳細上架文案與權限理由請參閱 [CHROMEWEBSTORE.md](CHROMEWEBSTORE.md)。
 
 ---
 
