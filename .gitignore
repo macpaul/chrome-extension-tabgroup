@@ -10,6 +10,8 @@ ehthumbs.db
 # Chrome Extension build / temporary files
 *.crx
 *.pem
+*.zip
+dist/
 
 # Dependencies / IDE
 node_modules/
