@@ -145,20 +145,17 @@ https://github.com/macpaul/chrome-extension-tabgroup/blob/main/PRIVACY.md
 
 ## 7. Packaging for Submission
 
-Run this command in the repository root to create a clean submission ZIP file:
+Use the automated packaging script to build a clean distribution package from any Git tag:
 
 ```bash
-zip -r tab-purger-grouper-v1.0.0.zip . \
-  -x ".git/*" \
-  -x "PRIVACY.md" \
-  -x "CHROMEWEBSTORE.md" \
-  -x "README.md" \
-  -x "LICENSE" \
-  -x ".gitignore" \
-  -x ".DS_Store" \
-  -x "Thumbs.db" \
-  -x "*.zip"
+# Package by specifying tag name directly:
+./package.sh v0.1
+
+# Or run interactively to choose from available tags:
+./package.sh
 ```
+
+The script extracts production files directly from the Git tree into `dist/tab-purger-grouper-<TAG>.zip`.
 
 Verify that the ZIP contains only:
 - `manifest.json`
